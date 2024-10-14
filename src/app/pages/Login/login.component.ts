@@ -5,6 +5,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 import { Ruolo, DB, Utente } from '../../types/db.type';
 import { CommonModule } from '@angular/common';
