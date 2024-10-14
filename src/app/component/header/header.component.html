@@ -1,0 +1,22 @@
+<header class="bg-gray-800 text-white">
+    <div class="flex justify-between items-center p-4">
+        <div class="flex items-center">
+            <span class="text-xl font-bold mr-4">Logo</span>
+            <span class="text-lg">Title</span>
+        </div>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded">Login</button>
+    </div>
+    <div class="bg-gray-700">
+        <ul class="flex justify-center space-x-6 py-2">
+            <li>
+                <a [routerLink]="['/showcase']"> Showcase </a>
+            </li>
+            <li>
+                <a [routerLink]="['/sold']" class="hover:text-blue-300">Sold Vehicles</a>
+            </li>
+            <li>
+                <a [routerLink]="['/stats']" class="hover:text-blue-300">Statistics</a>
+            </li>
+        </ul>
+    </div>
+</header>
