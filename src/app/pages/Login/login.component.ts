@@ -15,10 +15,10 @@ import { CommonModule } from '@angular/common';
 })
 export class LogInComponent {
 
-  userForm: FormGroup;
+  loginForm: FormGroup;
 
   constructor(private form: FormBuilder, private router: Router) {
-    this.userForm = this.form.group({
+    this.loginForm = this.form.group({
       role: ['', Validators.required],
       user: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(8)]]
@@ -31,11 +31,11 @@ export class LogInComponent {
   }
 
    onSubmit() {
-    const username = this.userForm.get('user')?.value;
-    const password = this.userForm.get('password')?.value;
-    const role = this.userForm.get('role')?.value;
+    const username = this.loginForm.get('user')?.value;
+    const password = this.loginForm.get('password')?.value;
+    const role = this.loginForm.get('role')?.value;
 
-    if (this.userForm.valid) {
+    if (this.loginForm.valid) {
       const validUser = this.validateUser(username, password);
 
     if (validUser) {
