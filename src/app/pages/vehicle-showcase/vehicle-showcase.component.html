@@ -1,0 +1,15 @@
+<div class="container mx-auto py-8">
+    <h2 class="text-2xl font-bold mb-4">Veicoli in Vendita</h2>
+    
+    <div *ngIf="vehiclesForSale.length > 0; else noVehicles" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <app-vehicle-card 
+        *ngFor="let veicolo of vehiclesForSale" 
+        [vehicle]="veicolo">
+      </app-vehicle-card>
+    </div>
+  
+    <!-- Messaggio se non ci sono veicoli in vendita -->
+    <ng-template #noVehicles>
+      <p>Non ci sono veicoli disponibili in questo momento.</p>
+    </ng-template>
+  </div>
