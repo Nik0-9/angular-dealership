@@ -8,7 +8,7 @@ export enum Ruolo {
     USER = "USER",
     ADMIN = "ADMIN"
 }
-enum TipoVeicolo {
+export enum TipoVeicolo {
     AUTO = "AUTO",
     MOTO = "MOTO"
 }
