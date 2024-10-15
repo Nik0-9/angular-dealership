@@ -1,1 +1,52 @@
-<p>stats-page works!</p>
+<div class="container mx-auto py-8">
+    <h2 class="text-2xl font-bold mb-6 text-center">Statistiche di Vendita</h2>
+  
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+  
+      <!-- Auto venduta a prezzo massimo -->
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <h3 class="text-lg font-bold mb-4">Veicolo Prezzo Massimo</h3>
+        <app-vehicle-card *ngIf="autoPrezzoMassimo" [vehicle]="autoPrezzoMassimo"></app-vehicle-card>
+        <ng-template #noData>
+          <p>Non ci sono veicoli venduti</p>
+        </ng-template>
+      </div>
+  
+      <!-- Auto venduta a prezzo minimo -->
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <h3 class="text-lg font-bold mb-4">Veicolo Prezzo Minimo</h3>
+        <app-vehicle-card *ngIf="autoPrezzoMinimo" [vehicle]="autoPrezzoMinimo"></app-vehicle-card>
+        <ng-template #noDataMin>
+          <p>Non ci sono veicoli venduti</p>
+        </ng-template>
+      </div>
+  
+    </div>
+  
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+      
+      <!-- Prezzo medio delle vendite -->
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <h3 class="text-lg font-bold mb-4">Prezzo Medio Vendite</h3>
+        <p *ngIf="vehiclesSold.length > 0; else noDataMean">
+          Prezzo Medio: {{ prezzoMedioVendite | currency }}
+        </p>
+        <ng-template #noDataMean>
+          <p>Non ci sono veicoli venduti</p>
+        </ng-template>
+      </div>
+  
+      <!-- Marchio più venduto -->
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <h3 class="text-lg font-bold mb-4">Brand Più Venduto</h3>
+        <p *ngIf="marchioPiuVenduto; else noDataBrand">
+          {{ marchioPiuVenduto }}
+        </p>
+        <ng-template #noDataBrand>
+          <p>Non ci sono veicoli venduti</p>
+        </ng-template>
+      </div>
+  
+    </div>
+  </div>
+  

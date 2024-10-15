@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DB, Veicolo, Stato } from '../../types/db.type'; // Importa il DB
+import { DB, Veicolo, Stato } from '../../types/db.type'; 
 import { VehicleCardComponent } from '../../component/vehicle-card/vehicle-card.component';
 import { RouterModule } from '@angular/router';
 
