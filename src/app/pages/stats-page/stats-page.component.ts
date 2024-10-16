@@ -19,12 +19,11 @@ export class StatsPageComponent {
   marchioPiuVenduto: string = '';
 
   constructor() {
-    // Filtro i veicoli venduti
+    // Filtro dei veicoli venduti
     this.vehiclesSold = DB.veicoli.filter(
       (veicolo) => veicolo.stato === Stato.VENDUTO
     );
 
-    // Calcolo delle statistiche
     this.autoPrezzoMassimo = this.getAutoPrezzoMassimo();
     this.autoPrezzoMinimo = this.getAutoPrezzoMinimo();
     this.prezzoMedioVendite = this.getPrezzoMedioVendite();
@@ -67,8 +66,9 @@ export class StatsPageComponent {
       return acc;
     }, {} as { [marca: string]: number });
 
-    return Object.keys(marcaCount).reduce((prev, curr) =>
-      marcaCount[prev] > marcaCount[curr] ? prev : curr
-    , '');
+    return Object.keys(marcaCount).reduce(
+      (prev, curr) => (marcaCount[prev] > marcaCount[curr] ? prev : curr),
+      ''
+    );
   }
 }

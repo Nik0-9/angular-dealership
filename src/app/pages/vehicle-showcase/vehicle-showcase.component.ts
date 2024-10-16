@@ -16,18 +16,13 @@ export class VehicleShowcaseComponent {
   vehicles: Veicolo[] = [];
   filteredVehicles: Veicolo[] = [];
   pageTitle: string = '';
-  TipoVeicolo = TipoVeicolo;
-  selectedType: TipoVeicolo | null = null;
 
   constructor(private route: ActivatedRoute) {
-    // Controlla la URL per determinare lo stato dei veicoli da mostrare e il titolo
     this.route.url.subscribe(url => {
       if (url.some(segment => segment.path === 'sold')) {
-        // Mostra veicoli venduti e aggiorna il titolo
         this.pageTitle = 'Veicoli Venduti';
         this.vehicles = DB.veicoli.filter(veicolo => veicolo.stato === Stato.VENDUTO);
       } else {
-        // Mostra veicoli in vendita e aggiorna il titolo
         this.pageTitle = 'Veicoli in Vendita';
         this.vehicles = DB.veicoli.filter(veicolo => veicolo.stato === Stato.VENDESI);
       }
@@ -35,17 +30,12 @@ export class VehicleShowcaseComponent {
     });
   }
 
-  applyFilter(type: TipoVeicolo) {
-    if (this.selectedType === type) {
-      this.selectedType = null;  // Deseleziona il filtro
-      this.filteredVehicles = this.vehicles;  // Mostra tutti i veicoli
-    } else {
-      this.selectedType = type;  // Applica il filtro selezionato
+  // Metodo per applicare il filtro
+  applyTypeFilter(type: TipoVeicolo | null) {
+    if (type) {
       this.filteredVehicles = this.vehicles.filter(veicolo => veicolo.tipo === type);
+    } else {
+      this.filteredVehicles = this.vehicles; // Mostra tutti i veicoli
     }
-  }
-
-  isFilterActive(type: TipoVeicolo): boolean {
-    return this.filteredVehicles.every(veicolo => veicolo.tipo === type);
   }
 }
