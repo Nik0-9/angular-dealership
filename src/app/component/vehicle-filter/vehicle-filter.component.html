@@ -2,7 +2,7 @@
   <!-- Filtro Auto -->
   <button
     (click)="toggleType(TipoVeicolo.AUTO)"
-    [class.bg-blue-500]="selectedType === TipoVeicolo.AUTO"
+    [class.bg-blue-500]="filterState.selectedType === TipoVeicolo.AUTO"
     class="text-white p-2 rounded"
   >
     Auto
@@ -11,7 +11,7 @@
   <!-- Filtro Moto -->
   <button
     (click)="toggleType(TipoVeicolo.MOTO)"
-    [class.bg-green-500]="selectedType === TipoVeicolo.MOTO"
+    [class.bg-green-500]="filterState.selectedType === TipoVeicolo.MOTO"
     class="text-white p-2 rounded"
   >
     Moto
@@ -42,6 +42,19 @@
       <option value="all">Tutti i modelli</option>
       <option *ngFor="let model of availableModels" [value]="model">
         {{ model }}
+      </option>
+    </select>
+  </div>
+  <div class="mx-4">
+    <label for="yearFilter" class="mr-2">Seleziona Anno:</label>
+    <select
+      id="yearFilter"
+      (change)="handleYearChange($event)"
+      class="p-2 rounded bg-gray-200"
+    >
+      <option value="0">Tutti gli anni</option>
+      <option *ngFor="let year of availableYears" [value]="year">
+        {{ year }}
       </option>
     </select>
   </div>

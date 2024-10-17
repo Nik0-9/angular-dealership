@@ -15,9 +15,10 @@ export class VehicleShowcaseComponent {
   vehicles: Veicolo[] = [];
   filteredVehicles: Veicolo[] = [];
   pageTitle: string = '';
-  selectedType: TipoVeicolo | null = null;
-  selectedBrand: string | null = null;
-  selectedModel: string | null = null;
+  filterByType: TipoVeicolo | null = null;
+  filterByBrand: string | undefined = undefined;
+  filterByModel: string | undefined = undefined;
+  filterByYear: number | undefined = undefined;
 
   constructor(private route: ActivatedRoute) {
     this.route.url.subscribe(url => {
@@ -33,25 +34,34 @@ export class VehicleShowcaseComponent {
   }
 
   applyTypeFilter(type: TipoVeicolo | null) {
-    this.selectedType = type;
+    this.filterByType = type;
+    this.filterByBrand = undefined;
+    this.filterByModel = undefined;
+    this.filterByYear = undefined;
     this.applyFilters();
   }
 
-  applyBrandFilter(brand: string) {
-    this.selectedBrand = (brand === 'all') ? null : brand;
+  applyBrandFilter(brand: string | undefined) {
+    this.filterByBrand = (brand === 'all') ? undefined : brand;
     this.applyFilters();
   }
   
-  applyModelFilter(model: string) {
-    this.selectedModel = model !== 'all' ? model : null;
+  applyModelFilter(model: string | undefined) {
+    this.filterByModel = (model == 'all') ? undefined : model ;
+    this.applyFilters();
+  }
+
+  applyYearFilter(year: number | undefined){
+    this.filterByYear = (year == 0 ) ? undefined : year;
     this.applyFilters();
   }
 
   applyFilters() {
     this.filteredVehicles = this.vehicles.filter(veicolo => {
-      return (!this.selectedType || veicolo.tipo === this.selectedType) &&
-             (!this.selectedBrand || veicolo.brand === this.selectedBrand) &&
-             (!this.selectedModel || veicolo.modello === this.selectedModel);
+      return (!this.filterByType || veicolo.tipo === this.filterByType) &&
+             (!this.filterByBrand || veicolo.brand === this.filterByBrand) &&
+             (!this.filterByModel || veicolo.modello === this.filterByModel) &&
+             (!this.filterByYear || veicolo.anno === this.filterByYear)
     });
   }
 }
