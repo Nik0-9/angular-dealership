@@ -44,6 +44,8 @@ export class VehicleFilterComponent implements OnInit {
   ngOnInit() {
     this.populateAvailableBrands();
     this.populateAvailableModels();
+    this.populateAvailableYears();
+
   }
 
   toggleType(type: TipoVeicolo) {
@@ -53,12 +55,19 @@ export class VehicleFilterComponent implements OnInit {
       this.filterState.selectedBrand = null;
       this.filterState.selectedModel = null;
       this.filterState.selectedYear = null;
-    } else {
+      this.filterState.selectedFuel = null;
+      this.populateAvailableBrands();
+      this.populateAvailableModels();
+      this.populateAvailableYears();
+    }
+     else {
       // Se un nuovo tipo viene selezionato, resetta il brand e il modello
       this.filterState.selectedType = type;
       this.filterState.selectedBrand = null;
       this.filterState.selectedModel = null;
       this.filterState.selectedYear = null;
+      this.filterState.selectedFuel = null;
+
     }
 
     // Ripopola la lista dei brand e dei modelli dopo il cambiamento del tipo
@@ -163,6 +172,8 @@ export class VehicleFilterComponent implements OnInit {
     const selectElement = event.target as HTMLSelectElement;
     this.filterState.selectedModel =
       selectElement.value === 'all' ? null : selectElement.value;
+    this.populateAvailableYears();
+
     this.applyFilters();
   }
 
