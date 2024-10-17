@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DB, Veicolo, Stato, TipoVeicolo } from '../../types/db.type';
+import { DB, Veicolo, Stato, TipoVeicolo, Alimentazione } from '../../types/db.type';
 import { ActivatedRoute } from '@angular/router';
 import { VehicleFilterComponent } from '../../component/vehicle-filter/vehicle-filter.component';
 import { VehicleCardComponent } from '../../component/vehicle-card/vehicle-card.component';
@@ -19,6 +19,7 @@ export class VehicleShowcaseComponent {
   filterByBrand: string | undefined = undefined;
   filterByModel: string | undefined = undefined;
   filterByYear: number | undefined = undefined;
+  filterByFuel: Alimentazione | null = null;
 
   constructor(private route: ActivatedRoute) {
     this.route.url.subscribe(url => {
@@ -52,7 +53,12 @@ export class VehicleShowcaseComponent {
   }
 
   applyYearFilter(year: number | undefined){
-    this.filterByYear = (year == 0 ) ? undefined : year;
+    this.filterByYear = (year == 1000 ) ? undefined : year;
+    this.applyFilters();
+  }
+
+  applyFuelFilter(fuel: Alimentazione | null){
+    this.filterByFuel = fuel;
     this.applyFilters();
   }
 
@@ -61,7 +67,8 @@ export class VehicleShowcaseComponent {
       return (!this.filterByType || veicolo.tipo === this.filterByType) &&
              (!this.filterByBrand || veicolo.brand === this.filterByBrand) &&
              (!this.filterByModel || veicolo.modello === this.filterByModel) &&
-             (!this.filterByYear || veicolo.anno === this.filterByYear)
+             (!this.filterByYear || veicolo.anno === this.filterByYear) &&
+             (!this.filterByFuel || veicolo.alimentazione === this.filterByFuel)
     });
   }
 }

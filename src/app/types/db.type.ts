@@ -12,7 +12,7 @@ export enum TipoVeicolo {
     AUTO = "AUTO",
     MOTO = "MOTO"
 }
-enum Aimentazione {
+export enum Alimentazione {
     DIESEL = "DIESEL",
     BENZINA = "BENZINA",
     IBRIDO = "IBRIDO",
@@ -29,7 +29,7 @@ export interface Veicolo {
     tipo: TipoVeicolo,
     anno: number,
     kilometri: number,
-    alimentazione: Aimentazione,
+    alimentazione: Alimentazione,
     prezzo: number,
     stato: Stato,
     proprietario: string
@@ -61,7 +61,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 12803,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 94811,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -72,7 +72,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 296734,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 76346,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -83,7 +83,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 23594,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 50101,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -94,7 +94,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2009,
             kilometri: 221349,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 59284,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -105,7 +105,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2024,
             kilometri: 146432,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 77780,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -116,7 +116,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 31402,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 47126,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -127,7 +127,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2010,
             kilometri: 25285,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 45583,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -138,7 +138,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 192765,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 2429,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -149,7 +149,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 240156,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 28088,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -160,7 +160,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 232006,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 55614,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -171,7 +171,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 221349,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 52683,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -182,7 +182,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 51557,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 81507,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -193,7 +193,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 172245,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 43616,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -204,7 +204,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 265984,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 21040,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -215,7 +215,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 239244,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 14287,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -226,7 +226,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 22343,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 25631,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -237,7 +237,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 266543,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 66661,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -248,7 +248,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 204203,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 11655,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -259,7 +259,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 280711,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 24870,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -270,7 +270,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 207800,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 94381,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -281,7 +281,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2009,
             kilometri: 160008,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 3363,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -292,7 +292,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2024,
             kilometri: 187905,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 6607,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -303,7 +303,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 270123,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 90751,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -314,7 +314,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 63790,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 92051,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -325,7 +325,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 101743,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 56891,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -336,7 +336,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 291861,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 81564,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -347,7 +347,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 238071,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 8517,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -358,7 +358,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 162862,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 94911,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -369,7 +369,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 68365,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 89571,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -380,7 +380,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 202052,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 75392,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -391,7 +391,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 176502,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 51327,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -402,7 +402,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 60834,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 88845,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -413,7 +413,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 200463,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 47693,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -424,7 +424,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 29400,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 48094,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -435,7 +435,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 200152,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 68864,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -446,7 +446,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 137281,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 12044,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -457,7 +457,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 124112,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 34806,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -468,7 +468,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 283488,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 2529,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -479,7 +479,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 77522,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 47964,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -490,7 +490,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 182721,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 72909,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -501,7 +501,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 270811,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 33075,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -512,7 +512,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 146486,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 47218,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -523,7 +523,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 87663,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 75092,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -534,7 +534,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 163885,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 44517,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -545,7 +545,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 54069,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 6377,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -556,7 +556,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2009,
             kilometri: 62745,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 77054,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -567,7 +567,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 61061,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 30407,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -578,7 +578,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 123979,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 70453,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -589,7 +589,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 199245,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 43952,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -600,7 +600,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 176544,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 57178,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -611,7 +611,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 131719,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 53219,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -622,7 +622,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 207878,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 9013,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -633,7 +633,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 255839,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 78000,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -644,7 +644,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 285334,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 30635,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -655,7 +655,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 10761,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 52231,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -666,7 +666,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 271425,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 10999,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -677,7 +677,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 183302,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 45651,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -688,7 +688,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 247196,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 68858,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -699,7 +699,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 127651,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 14142,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -710,7 +710,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 215645,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 40215,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -721,7 +721,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 121606,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 43407,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -732,7 +732,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 113351,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 45257,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -743,7 +743,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 170940,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 22762,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -754,7 +754,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 82874,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 69091,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -765,7 +765,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 264396,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 49094,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -776,7 +776,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 196878,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 82428,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -787,7 +787,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2010,
             kilometri: 69416,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 23791,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -798,7 +798,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 130424,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 86460,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -809,7 +809,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 57309,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 82050,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -820,7 +820,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 249113,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 36172,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -831,7 +831,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 28269,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 90600,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -842,7 +842,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 286024,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 10662,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -853,7 +853,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 47686,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 46494,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -864,7 +864,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 208865,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 11858,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -875,7 +875,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 217154,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 81511,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -886,7 +886,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 148331,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 2011,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -897,7 +897,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 17036,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 10268,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -908,7 +908,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 194279,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 35912,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -919,7 +919,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 72165,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 63735,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -930,7 +930,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 18268,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 25787,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -941,7 +941,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 236267,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 14627,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -952,7 +952,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 271216,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 7618,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -963,7 +963,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 20018,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 95086,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -974,7 +974,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 254917,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 32003,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -985,7 +985,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 129050,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 26389,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -996,7 +996,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 56565,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 28188,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1007,7 +1007,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 80770,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 91550,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1018,7 +1018,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 30389,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 90707,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1029,7 +1029,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 229836,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 59828,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1040,7 +1040,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 51644,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 82872,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1051,7 +1051,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 26027,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 73408,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1062,7 +1062,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 289596,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 46865,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1073,7 +1073,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 82788,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 51297,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1084,7 +1084,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 264279,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 33441,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1095,7 +1095,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 263590,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 42763,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1106,7 +1106,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 170127,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 52574,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1117,7 +1117,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 13276,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 26161,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1128,7 +1128,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 234998,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 22528,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1139,7 +1139,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 161222,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 66879,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1150,7 +1150,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 240134,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 54625,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1161,7 +1161,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 269822,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 49606,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1172,7 +1172,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 83559,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 84452,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1183,7 +1183,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 238575,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 92267,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1194,7 +1194,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 22855,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 8427,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1205,7 +1205,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 172627,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 7386,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1216,7 +1216,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2018,
             kilometri: 157875,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 21280,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1227,7 +1227,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 239536,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 51518,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1238,7 +1238,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 77113,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 53832,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1249,7 +1249,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 11572,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 27757,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1260,7 +1260,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 83592,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 63596,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1271,7 +1271,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 243578,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 65765,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1282,7 +1282,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 176924,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 95494,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1293,7 +1293,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 135323,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 68826,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1304,7 +1304,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 43910,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 43963,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1315,7 +1315,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 35041,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 21575,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1326,7 +1326,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 136975,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 70193,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1337,7 +1337,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 120891,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 77963,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1348,7 +1348,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 47456,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 24023,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1359,7 +1359,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 195291,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 75621,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1370,7 +1370,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 143358,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 57661,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1381,7 +1381,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 217146,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 55606,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1392,7 +1392,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 193401,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 14341,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1403,7 +1403,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 293917,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 53911,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1414,7 +1414,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 23292,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 51773,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1425,7 +1425,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2009,
             kilometri: 156034,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 27639,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1436,7 +1436,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 173850,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 91785,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1447,7 +1447,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 89385,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 42440,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1458,7 +1458,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 154076,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 89108,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1469,7 +1469,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 61938,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 23486,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1480,7 +1480,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 285295,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 49399,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1491,7 +1491,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2018,
             kilometri: 239361,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 13761,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1502,7 +1502,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 162760,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 2347,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1513,7 +1513,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 90476,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 80724,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1524,7 +1524,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 43800,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 8609,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1535,7 +1535,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 219038,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 36615,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1546,7 +1546,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 31799,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 29618,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1557,7 +1557,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2018,
             kilometri: 14162,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 3588,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1568,7 +1568,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 72660,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 67383,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1579,7 +1579,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 13978,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 65956,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1590,7 +1590,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 61534,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 88067,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1601,7 +1601,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 106928,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 80026,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1612,7 +1612,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 175922,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 5849,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1623,7 +1623,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 151752,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 51533,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1634,7 +1634,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 139612,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 83946,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1645,7 +1645,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 215730,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 56485,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1656,7 +1656,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 236624,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 83391,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1667,7 +1667,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 36052,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 61623,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1678,7 +1678,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2018,
             kilometri: 38976,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 81763,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1689,7 +1689,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 294072,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 76953,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1700,7 +1700,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2024,
             kilometri: 68127,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 27916,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1711,7 +1711,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 79436,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 70434,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1722,7 +1722,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 129513,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 7828,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1733,7 +1733,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 80621,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 69155,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1744,7 +1744,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 207667,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 98906,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1755,7 +1755,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 255032,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 32915,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1766,7 +1766,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 161178,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 15840,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1777,7 +1777,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 16845,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 54419,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1788,7 +1788,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 273381,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 56093,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1799,7 +1799,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 163262,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 18032,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1810,7 +1810,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 186351,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 63908,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1821,7 +1821,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 67636,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 19015,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1832,7 +1832,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2018,
             kilometri: 137700,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 22754,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1843,7 +1843,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 109723,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 26154,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1854,7 +1854,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 255266,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 95714,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1865,7 +1865,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 193115,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 86896,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1876,7 +1876,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 210478,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 76217,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1887,7 +1887,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 101702,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 47155,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1898,7 +1898,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 20317,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 69619,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1909,7 +1909,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 73813,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 62400,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1920,7 +1920,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 113011,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 68658,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1931,7 +1931,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 266734,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 31106,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1942,7 +1942,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 245154,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 62944,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1953,7 +1953,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 1367,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 95859,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1964,7 +1964,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 209313,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 75706,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1975,7 +1975,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 186306,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 41618,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -1986,7 +1986,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 55856,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 20158,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -1997,7 +1997,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 108416,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 81876,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2008,7 +2008,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 22779,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 76094,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2019,7 +2019,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 50247,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 47501,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2030,7 +2030,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 295221,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 24361,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2041,7 +2041,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 241592,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 68193,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2052,7 +2052,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 45752,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 3673,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2063,7 +2063,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 284607,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 9180,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2074,7 +2074,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 188747,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 25752,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2085,7 +2085,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 28336,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 48822,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2096,7 +2096,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 277711,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 15905,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2107,7 +2107,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 211495,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 67186,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2118,7 +2118,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 175332,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 29287,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2129,7 +2129,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 64957,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 45238,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2140,7 +2140,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 178269,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 6596,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2151,7 +2151,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 150535,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 2216,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2162,7 +2162,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 277931,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 76900,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2173,7 +2173,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 250513,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 51282,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2184,7 +2184,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 206763,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 23984,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2195,7 +2195,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 139198,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 93664,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2206,7 +2206,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 88723,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 54968,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2217,7 +2217,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 127999,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 76105,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2228,7 +2228,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 26082,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 60001,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2239,7 +2239,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 284153,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 12544,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2250,7 +2250,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 149284,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 10605,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2261,7 +2261,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 155072,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 34106,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2272,7 +2272,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 70686,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 39375,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2283,7 +2283,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 146240,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 76348,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2294,7 +2294,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 29883,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 45831,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2305,7 +2305,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 133609,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 88296,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2316,7 +2316,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 120749,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 58094,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2327,7 +2327,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 191194,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 83990,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2338,7 +2338,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 109388,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 33999,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2349,7 +2349,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 126566,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 15883,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2360,7 +2360,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 176922,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 73635,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2371,7 +2371,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 162554,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 55827,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2382,7 +2382,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 7541,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 1116,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2393,7 +2393,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 242255,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 64289,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2404,7 +2404,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 26678,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 58122,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2415,7 +2415,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 38040,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 96913,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2426,7 +2426,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 8058,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 47388,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2437,7 +2437,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 101498,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 8939,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2448,7 +2448,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 158390,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 43335,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2459,7 +2459,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 186319,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 10678,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2470,7 +2470,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 44666,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 73846,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2481,7 +2481,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 178453,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 95927,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2492,7 +2492,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 260083,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 29062,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2503,7 +2503,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 33939,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 90946,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2514,7 +2514,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 47392,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 22505,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2525,7 +2525,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 134939,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 23712,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2536,7 +2536,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 278918,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 27123,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2547,7 +2547,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 129077,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 48147,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2558,7 +2558,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 37799,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 59578,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2569,7 +2569,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 62248,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 88507,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2580,7 +2580,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 56037,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 44187,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2591,7 +2591,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 116,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 2578,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2602,7 +2602,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 96475,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 59607,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2613,7 +2613,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 274887,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 66512,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2624,7 +2624,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 102488,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 96190,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2635,7 +2635,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 129376,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 59724,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2646,7 +2646,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 191613,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 7973,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2657,7 +2657,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 19731,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 32811,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2668,7 +2668,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 3050,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 46032,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2679,7 +2679,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 247317,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 3530,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2690,7 +2690,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 52482,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 88705,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2701,7 +2701,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 119282,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 93454,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2712,7 +2712,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 280513,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 10516,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2723,7 +2723,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 163213,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 67561,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2734,7 +2734,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 86738,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 72606,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2745,7 +2745,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 50046,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 79291,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2756,7 +2756,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 248912,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 29006,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2767,7 +2767,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 66516,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 98462,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2778,7 +2778,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 98555,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 20790,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2789,7 +2789,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 53219,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 35395,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2800,7 +2800,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 141436,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 26229,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2811,7 +2811,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 162486,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 28833,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2822,7 +2822,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 112708,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 47241,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2833,7 +2833,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 198898,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 93627,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2844,7 +2844,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 270641,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 32268,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2855,7 +2855,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 184684,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 57439,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2866,7 +2866,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 53758,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 65135,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2877,7 +2877,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 241348,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 23765,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2888,7 +2888,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 235377,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 78785,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2899,7 +2899,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 114917,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 44699,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2910,7 +2910,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 100233,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 33370,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2921,7 +2921,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 154181,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 56241,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2932,7 +2932,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 166332,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 90392,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2943,7 +2943,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 237950,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 19658,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2954,7 +2954,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 145271,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 79380,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2965,7 +2965,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 192477,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 65528,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2976,7 +2976,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 247591,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 83895,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -2987,7 +2987,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 106874,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 51960,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -2998,7 +2998,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 65347,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 75085,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3009,7 +3009,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 113912,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 78962,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3020,7 +3020,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 223897,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 76699,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3031,7 +3031,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 5165,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 89954,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3042,7 +3042,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 191032,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 5893,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3053,7 +3053,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 210613,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 33853,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3064,7 +3064,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 262098,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 76303,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3075,7 +3075,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 69104,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 19954,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3086,7 +3086,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 152943,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 57893,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3097,7 +3097,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 176913,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 15536,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3108,7 +3108,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 60223,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 38182,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3119,7 +3119,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 230648,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 30346,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3130,7 +3130,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 194151,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 43611,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3141,7 +3141,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 206889,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 45294,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3152,7 +3152,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 216221,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 29298,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3163,7 +3163,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 248250,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 50052,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3174,7 +3174,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 270355,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 98755,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3185,7 +3185,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 188849,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 38080,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3196,7 +3196,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 195053,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 18244,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3207,7 +3207,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 273589,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 72711,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3218,7 +3218,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 93682,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 17191,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3229,7 +3229,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 144458,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 96241,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3240,7 +3240,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 124869,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 45652,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3251,7 +3251,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 219962,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 3506,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3262,7 +3262,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 246404,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 83179,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3273,7 +3273,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 34921,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 71477,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3284,7 +3284,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 163972,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 32281,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3295,7 +3295,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 223460,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 55690,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3306,7 +3306,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 150592,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 17716,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3317,7 +3317,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 116634,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 62656,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3328,7 +3328,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 96502,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 34291,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3339,7 +3339,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 23437,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 98819,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3350,7 +3350,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2024,
             kilometri: 182586,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 34392,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3361,7 +3361,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 102846,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 31706,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3372,7 +3372,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 19476,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 49403,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3383,7 +3383,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2024,
             kilometri: 35075,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 72637,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3394,7 +3394,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 11292,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 66472,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3405,7 +3405,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 140520,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 67303,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3416,7 +3416,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 238581,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 5870,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3427,7 +3427,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 133109,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 6832,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3438,7 +3438,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 294433,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 28122,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3449,7 +3449,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 18471,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 4951,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3460,7 +3460,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 236338,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 65711,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3471,7 +3471,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 165020,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 36974,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3482,7 +3482,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 13040,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 92322,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3493,7 +3493,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 249220,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 61827,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3504,7 +3504,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 195131,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 2430,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3515,7 +3515,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 21886,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 15325,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3526,7 +3526,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 291051,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 55582,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3537,7 +3537,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 104474,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 35799,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3548,7 +3548,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 119262,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 5764,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3559,7 +3559,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 115280,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 94591,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3570,7 +3570,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 167143,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 18947,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3581,7 +3581,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 205227,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 98616,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3592,7 +3592,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 61869,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 89508,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3603,7 +3603,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 17089,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 61004,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3614,7 +3614,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 7694,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 1780,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3625,7 +3625,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 168084,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 59141,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3636,7 +3636,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 44196,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 28948,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3647,7 +3647,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 202966,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 11928,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3658,7 +3658,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 114433,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 2412,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3669,7 +3669,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2018,
             kilometri: 69481,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 58083,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3680,7 +3680,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 31901,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 71463,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3691,7 +3691,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 38278,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 77288,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3702,7 +3702,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 202437,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 39936,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3713,7 +3713,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 252782,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 87008,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3724,7 +3724,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 88824,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 34661,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3735,7 +3735,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 186537,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 58751,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3746,7 +3746,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 37446,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 95864,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3757,7 +3757,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 65004,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 58369,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3768,7 +3768,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 134529,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 44845,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3779,7 +3779,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 23800,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 23011,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3790,7 +3790,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 83930,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 70433,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3801,7 +3801,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 241975,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 40892,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3812,7 +3812,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 147262,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 33289,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3823,7 +3823,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 223372,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 21750,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3834,7 +3834,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 258506,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 76051,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3845,7 +3845,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 297713,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 23309,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3856,7 +3856,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 40473,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 4989,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3867,7 +3867,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 154196,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 3433,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3878,7 +3878,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 221844,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 6763,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3889,7 +3889,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 285407,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 52747,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3900,7 +3900,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 259514,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 49421,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3911,7 +3911,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 89628,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 34821,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3922,7 +3922,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2024,
             kilometri: 5992,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 93482,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3933,7 +3933,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 299116,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 3218,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3944,7 +3944,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 43271,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 24068,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3955,7 +3955,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 273736,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 75848,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3966,7 +3966,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 111850,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 13701,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -3977,7 +3977,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 252517,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 77859,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3988,7 +3988,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 107320,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 44235,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -3999,7 +3999,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 244327,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 81958,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4010,7 +4010,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 163550,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 75103,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4021,7 +4021,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 167101,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 21563,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4032,7 +4032,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 204207,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 24579,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4043,7 +4043,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 200902,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 22510,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4054,7 +4054,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 281484,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 53972,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4065,7 +4065,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 101468,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 32244,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4076,7 +4076,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 188623,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 37650,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4087,7 +4087,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 177259,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 29877,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4098,7 +4098,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 75950,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 4339,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4109,7 +4109,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 148860,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 4249,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4120,7 +4120,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 268402,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 20165,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4131,7 +4131,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 293098,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 15093,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4142,7 +4142,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 196100,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 23692,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4153,7 +4153,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 83868,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 17308,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4164,7 +4164,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 29699,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 67590,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4175,7 +4175,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 245712,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 48496,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4186,7 +4186,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 92215,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 31015,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4197,7 +4197,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 119775,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 41290,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4208,7 +4208,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 269174,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 17209,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4219,7 +4219,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 187803,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 42389,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4230,7 +4230,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 85080,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 36356,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4241,7 +4241,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 289713,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 31930,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4252,7 +4252,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 17319,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 60259,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4263,7 +4263,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 40347,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 91669,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4274,7 +4274,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 298536,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 79810,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4285,7 +4285,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 180189,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 39327,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4296,7 +4296,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 251447,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 8887,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4307,7 +4307,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 25503,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 9811,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4318,7 +4318,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 88750,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 55392,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4329,7 +4329,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 263195,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 25639,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4340,7 +4340,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 295485,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 19776,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4351,7 +4351,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 134673,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 4098,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4362,7 +4362,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 296919,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 24198,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4373,7 +4373,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 195569,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 98525,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4384,7 +4384,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 20902,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 34647,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4395,7 +4395,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 184495,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 93217,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4406,7 +4406,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 151064,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 83301,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4417,7 +4417,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 293955,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 76111,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4428,7 +4428,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 87603,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 89673,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4439,7 +4439,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 65620,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 81429,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4450,7 +4450,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 129283,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 41878,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4461,7 +4461,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 30813,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 16585,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4472,7 +4472,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 142449,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 89660,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4483,7 +4483,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 35895,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 51110,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4494,7 +4494,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 252945,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 94655,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4505,7 +4505,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 199308,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 39018,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4516,7 +4516,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 43961,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 25781,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4527,7 +4527,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 41948,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 58726,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4538,7 +4538,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 122711,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 86492,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4549,7 +4549,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 132786,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 1834,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4560,7 +4560,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 103014,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 77981,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4571,7 +4571,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 20694,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 81747,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4582,7 +4582,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 23097,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 50756,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4593,7 +4593,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 224781,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 23302,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4604,7 +4604,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 242380,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 84668,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4615,7 +4615,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 91349,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 43950,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4626,7 +4626,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 171741,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 20952,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4637,7 +4637,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 255589,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 14802,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4648,7 +4648,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 297225,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 31506,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4659,7 +4659,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 112294,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 95766,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4670,7 +4670,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 252703,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 81081,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4681,7 +4681,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 270705,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 4667,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4692,7 +4692,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 40582,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 81539,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4703,7 +4703,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 292863,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 22757,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4714,7 +4714,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 132478,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 28800,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4725,7 +4725,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 143548,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 53998,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4736,7 +4736,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 121576,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 57909,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4747,7 +4747,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 22113,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 53411,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4758,7 +4758,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 13361,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 41611,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4769,7 +4769,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 71538,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 63856,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4780,7 +4780,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 1067,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 68687,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4791,7 +4791,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 176346,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 75389,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4802,7 +4802,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 255891,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 60279,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4813,7 +4813,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 112423,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 90820,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4824,7 +4824,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 145298,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 21791,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4835,7 +4835,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 289652,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 56853,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4846,7 +4846,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 53679,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 85597,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4857,7 +4857,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 96154,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 91022,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4868,7 +4868,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2010,
             kilometri: 285545,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 18592,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4879,7 +4879,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 43897,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 86139,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4890,7 +4890,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 122166,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 60993,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4901,7 +4901,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 226123,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 13997,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4912,7 +4912,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 215128,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 41046,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4923,7 +4923,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 115400,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 36788,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4934,7 +4934,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 204470,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 41893,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -4945,7 +4945,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 263767,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 73875,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4956,7 +4956,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2024,
             kilometri: 922,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 96591,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4967,7 +4967,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 213115,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 93829,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4978,7 +4978,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 78383,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 77840,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -4989,7 +4989,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 217582,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 5388,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5000,7 +5000,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 5972,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 92687,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5011,7 +5011,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 276072,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 21354,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5022,7 +5022,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 38651,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 53430,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5033,7 +5033,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 33212,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 10261,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5044,7 +5044,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 98975,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 13362,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5055,7 +5055,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 171467,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 72966,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5066,7 +5066,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 53981,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 67305,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5077,7 +5077,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 85707,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 81763,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5088,7 +5088,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 232607,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 75980,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5099,7 +5099,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 195435,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 74307,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5110,7 +5110,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 47343,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 51754,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5121,7 +5121,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 208848,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 11150,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5132,7 +5132,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 198991,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 47406,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5143,7 +5143,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 141257,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 28099,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5154,7 +5154,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 29086,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 84972,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5165,7 +5165,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 109259,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 79125,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5176,7 +5176,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 7234,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 77313,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5187,7 +5187,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 185856,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 6230,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5198,7 +5198,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 153269,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 27638,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5209,7 +5209,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 261187,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 36298,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5220,7 +5220,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 77571,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 95419,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5231,7 +5231,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 168659,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 53182,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5242,7 +5242,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 122519,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 92574,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5253,7 +5253,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 115118,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 63140,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5264,7 +5264,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 58321,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 86376,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5275,7 +5275,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 236922,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 87137,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5286,7 +5286,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 190132,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 98139,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5297,7 +5297,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 33520,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 76431,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5308,7 +5308,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 23350,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 10575,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5319,7 +5319,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 154920,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 20477,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5330,7 +5330,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 10783,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 40943,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5341,7 +5341,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 102345,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 45284,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5352,7 +5352,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 244623,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 51560,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5363,7 +5363,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 295848,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 2710,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5374,7 +5374,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 180719,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 93791,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5385,7 +5385,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 115784,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 55398,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5396,7 +5396,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 172677,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 22621,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5407,7 +5407,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 292015,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 66234,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5418,7 +5418,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 249613,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 21212,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5429,7 +5429,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 252518,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 60414,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5440,7 +5440,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 119274,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 67761,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5451,7 +5451,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 234265,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 27219,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5462,7 +5462,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2018,
             kilometri: 249374,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 9780,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5473,7 +5473,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 45383,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 57572,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5484,7 +5484,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 220938,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 70391,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5495,7 +5495,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 277635,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 35943,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5506,7 +5506,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 273386,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 81281,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5517,7 +5517,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2010,
             kilometri: 9234,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 70153,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5528,7 +5528,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 236137,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 73382,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5539,7 +5539,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 163396,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 59998,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5550,7 +5550,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 110667,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 32909,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5561,7 +5561,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 75964,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 1201,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5572,7 +5572,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 230051,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 94142,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5583,7 +5583,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 204360,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 62697,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5594,7 +5594,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 70727,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 84703,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5605,7 +5605,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 235282,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 3611,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5616,7 +5616,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 106401,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 21497,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5627,7 +5627,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 207182,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 12699,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5638,7 +5638,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 99863,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 53944,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5649,7 +5649,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 248057,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 70056,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5660,7 +5660,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 124098,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 47178,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5671,7 +5671,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2009,
             kilometri: 66458,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 31381,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5682,7 +5682,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 264343,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 26281,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5693,7 +5693,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 148981,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 62213,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5704,7 +5704,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 70962,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 69011,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5715,7 +5715,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 188532,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 95572,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5726,7 +5726,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 189360,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 45444,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5737,7 +5737,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 100790,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 44405,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5748,7 +5748,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 102355,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 4137,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5759,7 +5759,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 92569,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 41834,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5770,7 +5770,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2010,
             kilometri: 30515,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 80755,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5781,7 +5781,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 159296,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 21803,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5792,7 +5792,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 280879,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 40773,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5803,7 +5803,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 48694,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 98164,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5814,7 +5814,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 252568,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 27244,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5825,7 +5825,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 88110,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 44231,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5836,7 +5836,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 197599,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 12560,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5847,7 +5847,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 144757,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 55889,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5858,7 +5858,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 60990,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 97560,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5869,7 +5869,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 43170,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 91940,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5880,7 +5880,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 118250,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 31250,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5891,7 +5891,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 277311,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 59936,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5902,7 +5902,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 59451,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 13341,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5913,7 +5913,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 93916,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 98291,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5924,7 +5924,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 46841,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 70618,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5935,7 +5935,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 195326,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 38392,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -5946,7 +5946,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 3558,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 48804,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5957,7 +5957,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 180487,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 52301,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5968,7 +5968,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 15468,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 76263,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5979,7 +5979,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 233326,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 18569,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -5990,7 +5990,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 19194,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 87311,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6001,7 +6001,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2010,
             kilometri: 225120,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 69581,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6012,7 +6012,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 98651,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 14499,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6023,7 +6023,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 13993,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 77884,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6034,7 +6034,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 102979,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 54389,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6045,7 +6045,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 46458,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 80455,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6056,7 +6056,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 85824,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 57700,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6067,7 +6067,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 248645,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 28870,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6078,7 +6078,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 204601,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 13391,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6089,7 +6089,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2024,
             kilometri: 133024,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 5778,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6100,7 +6100,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 274650,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 41527,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6111,7 +6111,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 56692,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 34211,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6122,7 +6122,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 9438,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 35897,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6133,7 +6133,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 196157,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 12239,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6144,7 +6144,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 30526,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 35049,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6155,7 +6155,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 39489,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 94751,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6166,7 +6166,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 120200,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 88636,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6177,7 +6177,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 68090,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 35968,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6188,7 +6188,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 280123,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 44300,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6199,7 +6199,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2009,
             kilometri: 16440,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 34318,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6210,7 +6210,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 232538,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 63201,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6221,7 +6221,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2010,
             kilometri: 193556,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 65028,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6232,7 +6232,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 295971,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 68411,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6243,7 +6243,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 182661,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 2171,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6254,7 +6254,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 256133,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 30381,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6265,7 +6265,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 167192,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 92869,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6276,7 +6276,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 30720,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 12095,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6287,7 +6287,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 208776,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 92875,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6298,7 +6298,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 269918,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 4626,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6309,7 +6309,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 168119,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 48262,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6320,7 +6320,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 176458,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 21687,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6331,7 +6331,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 248744,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 35423,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6342,7 +6342,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 6047,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 53909,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6353,7 +6353,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2010,
             kilometri: 151652,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 2817,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6364,7 +6364,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 196528,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 9561,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6375,7 +6375,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2009,
             kilometri: 174437,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 99910,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6386,7 +6386,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 168920,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 71190,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6397,7 +6397,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 29887,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 35744,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6408,7 +6408,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 167170,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 56253,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6419,7 +6419,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 256718,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 53390,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6430,7 +6430,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 16108,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 45442,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6441,7 +6441,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 297212,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 72816,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6452,7 +6452,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 244205,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 65686,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6463,7 +6463,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 217859,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 3966,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6474,7 +6474,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 297621,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 3770,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6485,7 +6485,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 291700,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 63893,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6496,7 +6496,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 243744,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 14033,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6507,7 +6507,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 133475,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 92283,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6518,7 +6518,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 43704,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 98868,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6529,7 +6529,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 24858,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 75923,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6540,7 +6540,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 255280,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 76476,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6551,7 +6551,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 547,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 97627,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6562,7 +6562,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 152136,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 87026,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6573,7 +6573,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 134891,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 17504,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6584,7 +6584,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 290606,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 98929,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6595,7 +6595,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 162992,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 53266,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6606,7 +6606,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 163120,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 14424,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6617,7 +6617,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 63858,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 53924,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6628,7 +6628,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 278934,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 20178,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6639,7 +6639,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 238247,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 94897,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6650,7 +6650,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 7500,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 22215,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6661,7 +6661,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 199698,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 80241,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6672,7 +6672,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 5748,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 1277,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6683,7 +6683,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 50243,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 97906,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6694,7 +6694,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 283576,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 16841,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6705,7 +6705,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 192202,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 14082,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6716,7 +6716,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 205733,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 7643,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6727,7 +6727,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 6934,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 37718,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6738,7 +6738,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2024,
             kilometri: 261816,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 43847,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6749,7 +6749,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 180321,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 3504,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6760,7 +6760,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 132218,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 13103,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6771,7 +6771,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 191994,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 26750,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6782,7 +6782,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 70885,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 46455,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6793,7 +6793,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 280313,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 91137,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6804,7 +6804,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 154663,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 16279,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6815,7 +6815,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 185436,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 47514,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6826,7 +6826,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 177639,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 80845,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6837,7 +6837,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 270259,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 11321,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6848,7 +6848,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 38757,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 28268,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6859,7 +6859,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 180279,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 25302,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6870,7 +6870,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 242629,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 70615,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6881,7 +6881,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 23732,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 3310,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6892,7 +6892,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 36802,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 70703,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6903,7 +6903,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 118708,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 10992,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6914,7 +6914,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 262603,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 80980,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6925,7 +6925,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 163332,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 90834,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6936,7 +6936,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 254018,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 61819,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6947,7 +6947,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 142507,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 84097,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6958,7 +6958,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 76568,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 6284,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -6969,7 +6969,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 26073,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 65813,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6980,7 +6980,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 241434,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 43534,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -6991,7 +6991,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 191268,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 30357,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7002,7 +7002,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 151446,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 27948,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7013,7 +7013,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2009,
             kilometri: 213649,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 31866,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7024,7 +7024,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 212451,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 2766,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7035,7 +7035,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 75052,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 58968,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7046,7 +7046,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 231381,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 51420,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7057,7 +7057,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 198654,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 44733,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7068,7 +7068,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 147057,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 27148,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7079,7 +7079,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 130524,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 59983,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7090,7 +7090,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 88220,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 66902,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7101,7 +7101,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 65420,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 99493,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7112,7 +7112,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 64418,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 11169,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7123,7 +7123,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 109295,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 98103,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7134,7 +7134,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2018,
             kilometri: 34999,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 85334,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7145,7 +7145,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 146338,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 36729,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7156,7 +7156,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 16841,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 60157,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7167,7 +7167,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 296997,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 52160,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7178,7 +7178,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 158078,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 72825,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7189,7 +7189,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 124453,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 22649,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7200,7 +7200,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 122830,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 78877,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7211,7 +7211,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 155289,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 56569,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7222,7 +7222,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 64816,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 78849,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7233,7 +7233,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 87923,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 53266,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7244,7 +7244,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 112563,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 8918,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7255,7 +7255,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 78037,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 60625,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7266,7 +7266,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 183522,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 85075,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7277,7 +7277,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 275201,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 8955,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7288,7 +7288,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 26768,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 90866,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7299,7 +7299,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 294980,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 23403,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7310,7 +7310,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 233465,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 55162,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7321,7 +7321,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 126101,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 16538,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7332,7 +7332,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 250245,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 21522,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7343,7 +7343,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 281329,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 8207,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7354,7 +7354,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 29004,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 26711,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7365,7 +7365,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 64226,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 55162,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7376,7 +7376,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 97035,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 20712,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7387,7 +7387,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 292053,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 6896,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7398,7 +7398,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 116491,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 82422,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7409,7 +7409,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 196628,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 80051,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7420,7 +7420,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 36033,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 93304,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7431,7 +7431,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 245360,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 98046,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7442,7 +7442,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 290506,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 70026,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7453,7 +7453,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 136921,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 70094,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7464,7 +7464,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 261111,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 44014,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7475,7 +7475,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 128303,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 43695,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7486,7 +7486,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 208968,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 1104,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7497,7 +7497,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 141996,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 29848,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7508,7 +7508,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 136683,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 59564,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7519,7 +7519,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 159501,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 93701,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7530,7 +7530,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 30854,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 65667,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7541,7 +7541,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 42335,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 85108,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7552,7 +7552,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 188875,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 96280,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7563,7 +7563,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 60394,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 37054,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7574,7 +7574,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 253399,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 33786,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7585,7 +7585,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 104175,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 97531,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7596,7 +7596,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 91781,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 76716,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7607,7 +7607,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 138902,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 4055,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7618,7 +7618,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 149453,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 66343,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7629,7 +7629,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 207815,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 35679,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7640,7 +7640,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 164501,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 40475,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7651,7 +7651,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 102185,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 21632,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7662,7 +7662,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 178334,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 89130,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7673,7 +7673,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 280752,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 5790,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7684,7 +7684,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 21377,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 20487,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7695,7 +7695,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 197135,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 58882,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7706,7 +7706,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 195382,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 22432,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7717,7 +7717,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 129711,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 70790,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7728,7 +7728,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 46644,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 54387,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7739,7 +7739,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 107785,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 76378,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7750,7 +7750,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 294777,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 26006,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7761,7 +7761,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 156413,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 83556,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7772,7 +7772,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 261824,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 24259,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7783,7 +7783,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 299723,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 79985,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7794,7 +7794,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 206557,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 16912,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7805,7 +7805,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 58866,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 11361,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7816,7 +7816,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 278683,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 63920,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7827,7 +7827,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 52251,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 26534,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7838,7 +7838,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 112961,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 49143,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7849,7 +7849,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 233090,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 67123,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7860,7 +7860,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 21868,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 29106,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7871,7 +7871,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2009,
             kilometri: 131361,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 62791,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7882,7 +7882,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 169927,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 14764,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7893,7 +7893,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 188002,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 80304,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7904,7 +7904,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2010,
             kilometri: 247488,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 90702,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7915,7 +7915,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 39607,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 15099,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7926,7 +7926,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 70671,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 41005,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7937,7 +7937,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 254061,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 46774,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7948,7 +7948,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2009,
             kilometri: 72875,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 26439,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7959,7 +7959,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 178424,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 43440,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7970,7 +7970,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 131271,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 3964,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -7981,7 +7981,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2018,
             kilometri: 294280,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 21883,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -7992,7 +7992,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 202288,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 58967,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8003,7 +8003,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 206812,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 83000,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8014,7 +8014,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 67461,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 85111,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8025,7 +8025,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 291309,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 33509,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8036,7 +8036,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 89523,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 71514,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8047,7 +8047,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 95828,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 20762,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8058,7 +8058,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 279594,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 31139,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8069,7 +8069,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 100487,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 81626,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8080,7 +8080,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 274962,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 48872,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8091,7 +8091,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 39448,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 24177,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8102,7 +8102,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 28613,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 49028,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8113,7 +8113,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 37613,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 44054,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8124,7 +8124,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 218243,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 18996,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8135,7 +8135,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 31876,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 18535,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8146,7 +8146,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 232289,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 77189,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8157,7 +8157,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 249397,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 20968,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8168,7 +8168,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 119499,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 74153,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8179,7 +8179,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2010,
             kilometri: 294399,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 82416,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8190,7 +8190,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 115228,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 44423,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8201,7 +8201,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 138319,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 80987,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8212,7 +8212,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 298935,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 35807,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8223,7 +8223,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 291352,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 76077,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8234,7 +8234,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 159732,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 3494,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8245,7 +8245,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 66932,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 34436,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8256,7 +8256,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 222895,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 98756,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8267,7 +8267,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 45433,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 93724,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8278,7 +8278,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 266458,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 7620,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8289,7 +8289,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 58889,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 75329,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8300,7 +8300,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 259514,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 17508,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8311,7 +8311,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 162328,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 83264,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8322,7 +8322,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 38639,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 75840,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8333,7 +8333,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 33224,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 21291,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8344,7 +8344,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 230759,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 98045,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8355,7 +8355,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 130297,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 53691,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8366,7 +8366,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 191586,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 96694,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8377,7 +8377,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 211315,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 28238,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8388,7 +8388,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 36960,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 24035,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8399,7 +8399,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 106052,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 17760,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8410,7 +8410,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 16058,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 6670,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8421,7 +8421,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 17463,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 48235,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8432,7 +8432,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 7714,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 36479,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8443,7 +8443,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 192252,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 86975,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8454,7 +8454,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 269192,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 36841,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8465,7 +8465,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 27299,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 19715,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8476,7 +8476,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 233613,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 55878,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8487,7 +8487,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 182167,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 23148,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8498,7 +8498,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 3891,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 45041,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8509,7 +8509,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 80114,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 74820,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8520,7 +8520,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 141344,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 54199,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8531,7 +8531,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2010,
             kilometri: 160165,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 78484,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8542,7 +8542,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 295412,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 41783,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8553,7 +8553,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 256399,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 38047,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8564,7 +8564,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 109623,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 21110,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8575,7 +8575,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 69213,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 18470,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8586,7 +8586,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 274404,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 90553,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8597,7 +8597,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 293352,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 58388,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8608,7 +8608,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 226118,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 97053,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8619,7 +8619,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 7998,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 94467,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8630,7 +8630,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 274246,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 13764,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8641,7 +8641,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 227652,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 22303,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8652,7 +8652,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 27420,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 55725,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8663,7 +8663,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 282477,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 78903,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8674,7 +8674,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 265685,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 18166,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8685,7 +8685,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2024,
             kilometri: 285961,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 98470,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8696,7 +8696,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 232698,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 46888,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8707,7 +8707,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 204700,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 73457,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8718,7 +8718,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 55153,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 64753,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8729,7 +8729,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 190218,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 78377,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8740,7 +8740,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 27293,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 97966,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8751,7 +8751,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 6902,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 30067,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8762,7 +8762,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 265886,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 26618,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8773,7 +8773,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 135621,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 47294,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8784,7 +8784,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 88974,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 5922,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8795,7 +8795,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 36170,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 50322,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8806,7 +8806,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 216984,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 25209,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8817,7 +8817,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 66124,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 32474,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8828,7 +8828,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 231594,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 51878,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8839,7 +8839,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 95318,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 77194,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8850,7 +8850,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 95124,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 97193,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8861,7 +8861,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 203761,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 5485,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8872,7 +8872,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 88727,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 22257,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8883,7 +8883,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 198681,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 24150,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8894,7 +8894,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 1196,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 1861,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8905,7 +8905,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 95798,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 88087,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8916,7 +8916,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 156134,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 8772,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8927,7 +8927,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 221625,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 66473,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8938,7 +8938,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 262399,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 90206,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8949,7 +8949,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 99954,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 78803,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8960,7 +8960,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 213844,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 77513,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8971,7 +8971,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 107102,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 26342,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -8982,7 +8982,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 228168,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 13771,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -8993,7 +8993,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 87587,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 20917,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9004,7 +9004,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 197968,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 66304,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9015,7 +9015,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 239694,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 22530,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9026,7 +9026,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 240350,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 72895,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9037,7 +9037,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 88005,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 21093,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9048,7 +9048,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 70033,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 23468,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9059,7 +9059,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 134482,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 73025,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9070,7 +9070,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 223443,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 20110,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9081,7 +9081,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 103791,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 50746,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9092,7 +9092,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 141269,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 11282,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9103,7 +9103,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 118065,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 31685,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9114,7 +9114,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 269133,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 68179,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9125,7 +9125,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 251844,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 26194,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9136,7 +9136,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 266778,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 25508,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9147,7 +9147,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 150813,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 13604,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9158,7 +9158,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2014,
             kilometri: 206766,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 88117,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9169,7 +9169,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 116034,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 60313,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9180,7 +9180,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 210019,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 80410,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9191,7 +9191,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 111800,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 47765,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9202,7 +9202,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 133108,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 45894,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9213,7 +9213,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 113679,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 54881,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9224,7 +9224,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2021,
             kilometri: 294548,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 87302,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9235,7 +9235,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 37569,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 15786,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9246,7 +9246,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 154246,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 45253,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9257,7 +9257,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 229635,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 21789,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9268,7 +9268,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 49043,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 98481,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9279,7 +9279,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 35787,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 56567,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9290,7 +9290,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 203162,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 34932,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9301,7 +9301,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 69612,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 46131,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9312,7 +9312,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 298422,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 29995,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9323,7 +9323,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2024,
             kilometri: 34809,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 64811,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9334,7 +9334,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 131299,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 32303,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9345,7 +9345,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 201185,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 65210,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9356,7 +9356,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 169791,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 5762,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9367,7 +9367,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 92248,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 72547,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9378,7 +9378,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 218873,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 53595,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9389,7 +9389,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 83103,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 14570,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9400,7 +9400,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 150676,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 8262,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9411,7 +9411,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 48386,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 14571,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9422,7 +9422,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 227978,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 97127,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9433,7 +9433,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 72994,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 88274,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9444,7 +9444,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 12536,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 58562,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9455,7 +9455,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 277192,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 74432,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9466,7 +9466,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 282452,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 60593,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9477,7 +9477,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 184091,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 11856,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9488,7 +9488,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 253059,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 12928,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9499,7 +9499,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 16314,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 16942,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9510,7 +9510,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 165862,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 68194,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9521,7 +9521,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 6786,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 8460,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9532,7 +9532,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 201586,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 11521,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9543,7 +9543,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 9310,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 21011,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9554,7 +9554,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 24099,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 73980,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9565,7 +9565,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 292589,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 82913,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9576,7 +9576,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 246678,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 71728,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9587,7 +9587,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 251717,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 98561,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9598,7 +9598,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 187933,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 61274,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9609,7 +9609,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 182534,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 91036,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9620,7 +9620,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 145558,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 32823,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9631,7 +9631,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 152944,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 27979,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9642,7 +9642,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2009,
             kilometri: 133276,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 27336,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9653,7 +9653,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 139637,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 80368,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9664,7 +9664,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2001,
             kilometri: 118276,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 14818,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9675,7 +9675,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 147614,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 40693,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9686,7 +9686,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 51096,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 31971,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9697,7 +9697,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 298998,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 99688,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9708,7 +9708,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 292861,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 11533,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9719,7 +9719,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 135850,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 94027,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9730,7 +9730,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 279681,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 11446,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9741,7 +9741,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 61883,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 72100,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9752,7 +9752,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2023,
             kilometri: 293309,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 45749,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9763,7 +9763,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 112873,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 43104,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9774,7 +9774,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2012,
             kilometri: 138730,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 18091,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9785,7 +9785,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 277040,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 46255,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9796,7 +9796,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 241895,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 6518,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9807,7 +9807,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 72757,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 43813,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9818,7 +9818,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 118228,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 90082,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9829,7 +9829,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 92562,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 88741,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9840,7 +9840,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 49117,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 6672,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9851,7 +9851,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 88033,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 3228,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9862,7 +9862,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 83260,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 84251,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9873,7 +9873,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 216697,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 43405,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9884,7 +9884,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2010,
             kilometri: 173314,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 38995,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9895,7 +9895,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 98893,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 78672,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9906,7 +9906,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 163956,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 80904,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9917,7 +9917,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 186354,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 58698,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9928,7 +9928,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 130018,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 20607,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9939,7 +9939,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 40527,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 64333,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9950,7 +9950,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 136764,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 40987,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9961,7 +9961,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 129451,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 30126,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9972,7 +9972,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 85365,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 61397,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -9983,7 +9983,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 195644,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 6916,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -9994,7 +9994,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 191093,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 83037,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10005,7 +10005,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2012,
             kilometri: 76869,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 57109,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10016,7 +10016,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2004,
             kilometri: 171388,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 28330,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10027,7 +10027,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 56255,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 61630,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10038,7 +10038,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2003,
             kilometri: 36429,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 52275,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10049,7 +10049,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 273424,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 85226,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10060,7 +10060,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 33963,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 83873,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10071,7 +10071,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 143230,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 90487,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10082,7 +10082,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 171717,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 19948,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10093,7 +10093,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2004,
             kilometri: 184360,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 46997,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10104,7 +10104,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 238834,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 4665,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10115,7 +10115,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2020,
             kilometri: 9235,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 14360,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10126,7 +10126,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 160248,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 34908,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10137,7 +10137,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 81510,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 67649,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10148,7 +10148,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 247847,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 60801,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10159,7 +10159,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 292526,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 51075,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10170,7 +10170,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 239639,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 77142,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10181,7 +10181,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 18206,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 65209,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10192,7 +10192,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 56827,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 58929,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10203,7 +10203,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 254732,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 80793,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10214,7 +10214,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 37270,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 29256,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10225,7 +10225,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 287122,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 47946,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10236,7 +10236,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 73501,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 16647,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10247,7 +10247,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 87762,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 33051,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10258,7 +10258,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2011,
             kilometri: 54866,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 1012,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10269,7 +10269,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 216822,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 33804,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10280,7 +10280,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 82784,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 60369,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10291,7 +10291,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2008,
             kilometri: 245837,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 47923,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10302,7 +10302,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2024,
             kilometri: 269015,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 2891,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10313,7 +10313,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2006,
             kilometri: 249142,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 36302,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10324,7 +10324,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 242666,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 43574,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10335,7 +10335,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 288002,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 4090,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10346,7 +10346,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 89040,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 98927,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10357,7 +10357,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 191904,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 5595,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10368,7 +10368,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 296038,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 40779,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10379,7 +10379,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2013,
             kilometri: 279562,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 12782,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10390,7 +10390,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 10348,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 14479,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10401,7 +10401,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2002,
             kilometri: 68596,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 85579,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10412,7 +10412,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 223069,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 79534,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10423,7 +10423,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 180812,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 43463,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10434,7 +10434,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 137974,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 86853,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10445,7 +10445,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 162468,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 67432,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10456,7 +10456,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 258550,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 13642,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10467,7 +10467,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2005,
             kilometri: 58173,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 33885,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10478,7 +10478,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 254797,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 30902,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10489,7 +10489,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 195793,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 75712,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10500,7 +10500,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 258933,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 46941,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10511,7 +10511,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 222549,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 76741,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10522,7 +10522,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 77803,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 62942,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10533,7 +10533,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 170082,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 55077,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10544,7 +10544,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2015,
             kilometri: 247492,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 77393,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10555,7 +10555,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 7108,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 71583,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10566,7 +10566,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 169952,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 84264,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10577,7 +10577,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 107586,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 45664,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10588,7 +10588,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2017,
             kilometri: 221183,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 14541,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10599,7 +10599,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 80771,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 85326,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10610,7 +10610,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2011,
             kilometri: 130238,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 42671,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10621,7 +10621,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2018,
             kilometri: 176302,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 68995,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10632,7 +10632,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 298639,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 31480,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10643,7 +10643,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 191612,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 32418,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10654,7 +10654,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2000,
             kilometri: 25018,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 98447,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10665,7 +10665,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2017,
             kilometri: 161345,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 74032,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10676,7 +10676,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2009,
             kilometri: 237059,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 70677,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10687,7 +10687,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2022,
             kilometri: 221,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 37939,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10698,7 +10698,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2021,
             kilometri: 84779,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 18967,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10709,7 +10709,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2007,
             kilometri: 140975,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 27327,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10720,7 +10720,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 266665,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 49703,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10731,7 +10731,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2007,
             kilometri: 149572,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 22800,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10742,7 +10742,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2018,
             kilometri: 262715,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 89174,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10753,7 +10753,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2022,
             kilometri: 14225,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 45080,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10764,7 +10764,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 198562,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 70925,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10775,7 +10775,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2016,
             kilometri: 76166,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 92804,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10786,7 +10786,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 204672,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 72847,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10797,7 +10797,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2014,
             kilometri: 216727,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 9135,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10808,7 +10808,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2001,
             kilometri: 102309,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 89772,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10819,7 +10819,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 251228,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 85957,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10830,7 +10830,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2023,
             kilometri: 213638,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 26396,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10841,7 +10841,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 210140,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 83330,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10852,7 +10852,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 26471,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 37082,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10863,7 +10863,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2019,
             kilometri: 218132,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 13538,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10874,7 +10874,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 11033,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 42736,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10885,7 +10885,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2000,
             kilometri: 139917,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 9472,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10896,7 +10896,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2006,
             kilometri: 169425,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 91041,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10907,7 +10907,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2005,
             kilometri: 169813,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 55282,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10918,7 +10918,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2013,
             kilometri: 89544,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 65961,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10929,7 +10929,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2019,
             kilometri: 68590,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 33832,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10940,7 +10940,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2015,
             kilometri: 285562,
-             alimentazione: Aimentazione.DIESEL,
+             alimentazione: Alimentazione.DIESEL,
             prezzo: 39303,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10951,7 +10951,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 44915,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 13646,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10962,7 +10962,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2010,
             kilometri: 245682,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 36510,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -10973,7 +10973,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2018,
             kilometri: 272258,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 49721,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10984,7 +10984,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2003,
             kilometri: 159488,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 2621,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -10995,7 +10995,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2020,
             kilometri: 67255,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 56107,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -11006,7 +11006,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2024,
             kilometri: 254022,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 14920,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -11017,7 +11017,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2002,
             kilometri: 211061,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 6616,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -11028,7 +11028,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2008,
             kilometri: 190622,
-            alimentazione: Aimentazione.BENZINA,
+            alimentazione: Alimentazione.BENZINA,
             prezzo: 4365,
             stato: Stato.VENDUTO,
             proprietario: "user"
@@ -11039,7 +11039,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.MOTO,
             anno: 2018,
             kilometri: 296671,
-            alimentazione: Aimentazione.IBRIDO,
+            alimentazione: Alimentazione.IBRIDO,
             prezzo: 60249,
             stato: Stato.VENDESI,
             proprietario: "admin"
@@ -11050,7 +11050,7 @@ export const DB: DB = {
             tipo: TipoVeicolo.AUTO,
             anno: 2016,
             kilometri: 23685,
-            alimentazione: Aimentazione.ELETTRICO,
+            alimentazione: Alimentazione.ELETTRICO,
             prezzo: 95077,
             stato: Stato.VENDESI,
             proprietario: "admin"

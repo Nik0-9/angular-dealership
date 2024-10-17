@@ -17,6 +17,9 @@
     Moto
   </button>
 
+  <!-- Filtro per alimentazione -->
+  <app-fuel-filter (filterByFuel)="applyFuelFilter($event)"></app-fuel-filter>
+  
   <!-- Filtro per brand -->
   <div class="mx-4">
     <label for="brandFilter" class="mr-2">Seleziona Brand:</label>
@@ -52,7 +55,7 @@
       (change)="handleYearChange($event)"
       class="p-2 rounded bg-gray-200"
     >
-      <option value="0">Tutti gli anni</option>
+      <option value="1000">Tutti gli anni</option>
       <option *ngFor="let year of availableYears" [value]="year">
         {{ year }}
       </option>
