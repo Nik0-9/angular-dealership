@@ -5,10 +5,10 @@
   <app-vehicle-filter 
   [vehicles]="vehicles" 
   (filterByType)="toggleType($event)" 
+  (filterByFuel)="applyFuelFilter($event)"
   (filterByBrand)="applyBrandFilter($event)"
   (filterByModel)="applyModelFilter($event)"
   (filterByYear)="applyYearFilter($event)"
-  (filterByFuel)="applyFuelFilter($event)"
   (filterByPrice)="onFilterByPrice($event)"
   (filterByKm)="onFilterByKm($event)">
   >
