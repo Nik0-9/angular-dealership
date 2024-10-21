@@ -6,7 +6,7 @@
     (ngModelChange)="handleFuelChange($event)"
     class="p-2 rounded bg-gray-200"
   >
-  <option value="all" [selected]="selectedFuel == null ">Tutte le alimentazioni</option>
+  <option value="all" [selected]="selectedFuel === null ">Tutte le alimentazioni</option>
     <option *ngFor="let alimentazione of alimentazioni" [value]="alimentazione">
       {{ alimentazione }}
     </option>

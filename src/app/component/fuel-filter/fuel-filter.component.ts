@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./fuel-filter.component.scss'],
 })
 export class FuelFilterComponent {
-  @Output() filterByFuel = new EventEmitter<Alimentazione | null>();
+  @Output() filterByFuel = new EventEmitter<Alimentazione | null | string>();
 
   alimentazioni = Object.values(Alimentazione); // Ottieni tutti i tipi di alimentazione
   selectedFuel: Alimentazione | null | string = null;
@@ -22,6 +22,7 @@ export class FuelFilterComponent {
   }
 
   handleFuelChange(value: string) {
+    
     const fuel = value === 'all' ? null : (value as Alimentazione);
     this.filterByFuel.emit(fuel);
   }

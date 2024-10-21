@@ -61,19 +61,21 @@ export class VehicleFilterComponent implements OnInit {
 
   toggleType(type: TipoVeicolo) {
     if (this.filterState.selectedType === type) {
+      // Se il tipo viene deselezionato, resetta tutto
       this.filterState.selectedType = null;
       this.filterState.selectedBrand = null;
       this.filterState.selectedModel = null;
       this.filterState.selectedYear = null;
       this.filterState.selectedFuel = null;
-    }else{
+    } else {
       this.filterState.selectedType = type;
       this.filterState.selectedBrand = null;
       this.filterState.selectedModel = null;
       this.filterState.selectedYear = null;
-    this.filterState.selectedFuel = null;
-
+      this.filterState.selectedFuel = null;
     }
+    console.log('selected:'+ this.filterState.selectedType);
+    console.log('type:'+ type);
     // Ripopola le opzioni disponibili in base ai nuovi filtri
     this.populateAvailableBrands();
     this.populateAvailableModels();
@@ -187,7 +189,7 @@ export class VehicleFilterComponent implements OnInit {
     this.applyFilters();
   }
 
-  applyFuelFilter(fuel: Alimentazione | null) {
+  applyFuelFilter(fuel: Alimentazione | null | string) {
     this.filterState.selectedFuel = fuel;
     this.applyFilters();
   }

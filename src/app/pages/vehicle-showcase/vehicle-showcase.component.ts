@@ -19,7 +19,7 @@ export class VehicleShowcaseComponent {
   filterByBrand: string | undefined = undefined;
   filterByModel: string | undefined = undefined;
   filterByYear: number | undefined = undefined;
-  filterByFuel: Alimentazione | string | null = null;
+  filterByFuel: Alimentazione | string | null = '';
   filterByPrice: {min: number, max: number} | null = null;
   filterByKm: {min: number, max: number} | null = null;
 
@@ -37,11 +37,19 @@ export class VehicleShowcaseComponent {
   }
 
   toggleType(type: TipoVeicolo | null) {
-    this.filterByType = type;
-    this.filterByBrand = undefined;
-    this.filterByModel = undefined;
-    this.filterByYear = undefined;
-    this.filterByFuel = null;
+    if(this.filterByType === null){
+      this.filterByBrand = undefined;
+      this.filterByModel = undefined;
+      this.filterByYear = undefined;
+      this.filterByFuel = null;
+    }else{
+      this.filterByType = type;
+      this.filterByBrand = undefined;
+      this.filterByModel = undefined;
+      this.filterByYear = undefined;
+      this.filterByFuel = null;
+    }
+ 
     this.applyFilters();
   }
 
