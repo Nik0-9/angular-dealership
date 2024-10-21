@@ -4,11 +4,13 @@
   <!-- Include il componente filtro -->
   <app-vehicle-filter 
   [vehicles]="vehicles" 
-  (filterByType)="applyTypeFilter($event)" 
+  (filterByType)="toggleType($event)" 
   (filterByBrand)="applyBrandFilter($event)"
   (filterByModel)="applyModelFilter($event)"
   (filterByYear)="applyYearFilter($event)"
   (filterByFuel)="applyFuelFilter($event)"
+  (filterByPrice)="onFilterByPrice($event)"
+  (filterByKm)="onFilterByKm($event)">
   >
 </app-vehicle-filter>
 

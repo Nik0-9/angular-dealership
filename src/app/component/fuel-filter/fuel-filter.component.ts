@@ -14,10 +14,14 @@ export class FuelFilterComponent {
   @Output() filterByFuel = new EventEmitter<Alimentazione | null>();
 
   alimentazioni = Object.values(Alimentazione); // Ottieni tutti i tipi di alimentazione
-
+  selectedFuel = undefined;
   handleFuelChange(event: Event) {
     const selectElement = event.target as HTMLSelectElement;
     const fuel = selectElement.value === 'all' ? null : selectElement.value as Alimentazione;
     this.filterByFuel.emit(fuel);
+  }
+  resetFuelSelection() {
+    this.selectedFuel = undefined; // Resetta il valore di selectedFuel
+    this.filterByFuel.emit(undefined); // Emette undefined per resettare il filtro
   }
 }

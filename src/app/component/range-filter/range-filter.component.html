@@ -1,0 +1,47 @@
+<div class="flex ">
+    <div class="mb-4">
+        <label for="priceRange">Prezzo (€):</label>
+        <div class="flex gap-10">
+          <input
+            type="range"
+            id="priceMin"
+            [(ngModel)]="priceMin"
+            [min]="priceRange.min"
+            [max]="priceMax"
+            (input)="handlePriceChange()"
+          />
+          <input
+            type="range"
+            id="priceMax"
+            [(ngModel)]="priceMax"
+            [min]="priceMin"
+            [max]="priceRange.max"
+            (input)="handlePriceChange()"
+          />
+        </div>
+        <span>{{ priceMin }} € - {{ priceMax }} €</span>
+      </div>
+      
+      <div class="mb-4">
+        <label for="kmRange">Chilometraggio (Km):</label>
+        <div class="flex gap-10">
+          <input
+            type="range"
+            id="kmMin"
+            [(ngModel)]="kmMin"
+            [min]="kmRange.min"
+            [max]="kmMax"
+            (input)="handleKmChange()"
+          />
+          <input
+            type="range"
+            id="kmMax"
+            [(ngModel)]="kmMax"
+            [min]="kmMin"
+            [max]="kmRange.max"
+            (input)="handleKmChange()"
+          />
+        </div>
+        <span>{{ kmMin }} Km - {{ kmMax }} Km</span>
+      </div>
+</div>

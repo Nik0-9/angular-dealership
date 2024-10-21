@@ -16,6 +16,9 @@
   >
     Moto
   </button>
+  <app-range-filter (filterByPrice)="applyPriceFilter($event)" (filterByKm)="applyKmFilter($event)"></app-range-filter>
+</div>
+<div class="flex space-x-4 mb-4">
 
   <!-- Filtro per alimentazione -->
   <app-fuel-filter (filterByFuel)="applyFuelFilter($event)"></app-fuel-filter>

@@ -20,6 +20,8 @@ export class VehicleShowcaseComponent {
   filterByModel: string | undefined = undefined;
   filterByYear: number | undefined = undefined;
   filterByFuel: Alimentazione | null = null;
+  filterByPrice: {min: number, max: number} | null = null;
+  filterByKm: {min: number, max: number} | null = null;
 
   constructor(private route: ActivatedRoute) {
     this.route.url.subscribe(url => {
@@ -34,11 +36,12 @@ export class VehicleShowcaseComponent {
     });
   }
 
-  applyTypeFilter(type: TipoVeicolo | null) {
+  toggleType(type: TipoVeicolo | null) {
     this.filterByType = type;
     this.filterByBrand = undefined;
     this.filterByModel = undefined;
     this.filterByYear = undefined;
+    this.filterByFuel = null
     this.applyFilters();
   }
 
@@ -58,7 +61,19 @@ export class VehicleShowcaseComponent {
   }
 
   applyFuelFilter(fuel: Alimentazione | null){
-    this.filterByFuel = fuel;
+    this.filterByFuel = 'all' ? null : fuel;
+    this.applyFilters();
+  }
+
+  // Intercetta il filtro di prezzo
+  onFilterByPrice(price: { min: number, max: number }) {
+    this.filterByPrice = price;
+    this.applyFilters();
+  }
+
+  // Intercetta il filtro di chilometraggio
+  onFilterByKm(km: { min: number, max: number }) {
+    this.filterByKm = km;
     this.applyFilters();
   }
 
@@ -68,7 +83,9 @@ export class VehicleShowcaseComponent {
              (!this.filterByBrand || veicolo.brand === this.filterByBrand) &&
              (!this.filterByModel || veicolo.modello === this.filterByModel) &&
              (!this.filterByYear || veicolo.anno === this.filterByYear) &&
-             (!this.filterByFuel || veicolo.alimentazione === this.filterByFuel)
+             (!this.filterByFuel || veicolo.alimentazione === this.filterByFuel) &&
+             (!this.filterByPrice || (veicolo.prezzo >= this.filterByPrice.min && veicolo.prezzo <= this.filterByPrice.max)) &&
+           (!this.filterByKm || (veicolo.kilometri >= this.filterByKm.min && veicolo.kilometri <= this.filterByKm.max));
     });
   }
 }
