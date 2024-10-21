@@ -1,47 +1,74 @@
-<div class="flex ">
-    <div class="mb-4">
-        <label for="priceRange">Prezzo (€):</label>
-        <div class="flex gap-10">
-          <input
-            type="range"
-            id="priceMin"
-            [(ngModel)]="priceMin"
-            [min]="priceRange.min"
-            [max]="priceMax"
-            (input)="handlePriceChange()"
-          />
-          <input
-            type="range"
-            id="priceMax"
-            [(ngModel)]="priceMax"
-            [min]="priceMin"
-            [max]="priceRange.max"
-            (input)="handlePriceChange()"
-          />
-        </div>
-        <span>{{ priceMin }} € - {{ priceMax }} €</span>
+<div class="flex justify-center items-center">
+  <!-- Contenitore per i filtri -->
+  <div class="flex flex-col md:flex-row gap-10">
+    <!-- Filtro Prezzo -->
+    <div class="mb-4 w-full max-w-md">
+      <label for="priceRange">Prezzo (€):</label>
+      <input
+        type="range"
+        id="priceRange"
+        [(ngModel)]="priceMax"
+        [min]="priceRange.min"
+        [max]="priceRange.max"
+        (input)="handlePriceChange()"
+        class="w-full"
+      />
+      <span>{{ priceMin }} € - {{ priceMax }} €</span>
+      <div class="flex justify-between">
+        <input
+          type="number"
+          [(ngModel)]="priceMin"
+          [min]="priceRange.min"
+          [max]="priceMax"
+          (input)="handlePriceChange()"
+          placeholder="Min"
+          class="mr-2 w-full max-w-xs"
+        />
+        <input
+          type="number"
+          [(ngModel)]="priceMax"
+          [min]="priceMin"
+          [max]="priceRange.max"
+          (input)="handlePriceChange()"
+          placeholder="Max"
+          class="ml-2 w-full max-w-xs"
+        />
       </div>
-      
-      <div class="mb-4">
-        <label for="kmRange">Chilometraggio (Km):</label>
-        <div class="flex gap-10">
-          <input
-            type="range"
-            id="kmMin"
-            [(ngModel)]="kmMin"
-            [min]="kmRange.min"
-            [max]="kmMax"
-            (input)="handleKmChange()"
-          />
-          <input
-            type="range"
-            id="kmMax"
-            [(ngModel)]="kmMax"
-            [min]="kmMin"
-            [max]="kmRange.max"
-            (input)="handleKmChange()"
-          />
-        </div>
-        <span>{{ kmMin }} Km - {{ kmMax }} Km</span>
+    </div>
+
+    <!-- Filtro Chilometraggio -->
+    <div class="mb-4 w-full max-w-md">
+      <label for="kmRange">Chilometraggio (Km):</label>
+      <input
+        type="range"
+        id="kmRange"
+        [(ngModel)]="kmMax"
+        [min]="kmRange.min"
+        [max]="kmRange.max"
+        (input)="handleKmChange()"
+        class="w-full"
+      />
+      <span>{{ kmMin }} Km - {{ kmMax }} Km</span>
+      <div class="flex justify-between">
+        <input
+          type="number"
+          [(ngModel)]="kmMin"
+          [min]="kmRange.min"
+          [max]="kmMax"
+          (input)="handleKmChange()"
+          placeholder="Min"
+          class="mr-2 w-full max-w-xs"
+        />
+        <input
+          type="number"
+          [(ngModel)]="kmMax"
+          [min]="kmMin"
+          [max]="kmRange.max"
+          (input)="handleKmChange()"
+          placeholder="Max"
+          class="ml-2 w-full max-w-xs"
+        />
       </div>
+    </div>
+  </div>
 </div>

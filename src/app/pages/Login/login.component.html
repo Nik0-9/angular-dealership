@@ -5,7 +5,7 @@
       <!-- Ruolo -->
       <div class="flex flex-col gap-2">
         <label for="role" class="font-semibold">Role:</label>
-        <select name="role" formControlName="role" id="role" class="w-full border border-gray-300 p-2 rounded-md">
+        <select formControlName="role" class="w-full border border-gray-300 p-2 rounded-md">
           <option value="">Select Role</option>
           <option value="ADMIN">Admin</option>
           <option value="USER">User</option>
@@ -19,7 +19,7 @@
       <!-- Nome utente -->
       <div class="flex flex-col gap-2">
         <label for="user" class="font-semibold">User:</label>
-        <input type="text" id="user" name="user" formControlName="user" class="w-full border border-gray-300 p-2 rounded-md">
+        <input type="text" formControlName="user" class="w-full border border-gray-300 p-2 rounded-md">
         <!-- Errore nome utente -->
         <div *ngIf="loginForm.get('user')?.touched && loginForm.get('user')?.invalid" class="text-red-500 text-sm">
           <span *ngIf="loginForm.get('user')?.hasError('required')">User is required.</span>
@@ -29,7 +29,7 @@
       <!-- Password -->
       <div class="flex flex-col gap-2">
         <label for="password" class="font-semibold">Password:</label>
-        <input type="password" id="password" name="password" formControlName="password" class="w-full border border-gray-300 p-2 rounded-md">
+        <input type="password" formControlName="password" class="w-full border border-gray-300 p-2 rounded-md">
         <!-- Errore password -->
         <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="text-red-500 text-sm">
           <span *ngIf="loginForm.get('password')?.hasError('required')">Password is required.</span>

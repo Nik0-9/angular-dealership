@@ -1,4 +1,4 @@
-import {Component,Output,EventEmitter,} from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './range-filter.component.html',
-  styleUrl: './range-filter.component.scss',
+  styleUrls: ['./range-filter.component.scss'],
 })
 export class RangeFilterComponent {
   @Output() filterByPrice = new EventEmitter<{ min: number; max: number }>();
@@ -15,7 +15,7 @@ export class RangeFilterComponent {
 
   priceMin: number = 0;
   priceMax: number = 100000;
-  
+
   kmMin: number = 0;
   kmMax: number = 500000;
 
@@ -23,10 +23,18 @@ export class RangeFilterComponent {
   kmRange = { min: 0, max: 500000 };
 
   handlePriceChange() {
+    // Assicurati che priceMin e priceMax siano sincronizzati
+    if (this.priceMin > this.priceMax) {
+      this.priceMin = this.priceMax;
+    }
     this.filterByPrice.emit({ min: this.priceMin, max: this.priceMax });
   }
 
   handleKmChange() {
+    // Assicurati che kmMin e kmMax siano sincronizzati
+    if (this.kmMin > this.kmMax) {
+      this.kmMin = this.kmMax;
+    }
     this.filterByKm.emit({ min: this.kmMin, max: this.kmMax });
   }
 }

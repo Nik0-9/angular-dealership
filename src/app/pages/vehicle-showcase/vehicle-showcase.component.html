@@ -4,7 +4,7 @@
   <!-- Include il componente filtro -->
   <app-vehicle-filter 
   [vehicles]="vehicles" 
-  (filterByType)="toggleType($event)" 
+  (filterByType)="applyTypeFilter($event)" 
   (filterByFuel)="applyFuelFilter($event)"
   (filterByBrand)="applyBrandFilter($event)"
   (filterByModel)="applyModelFilter($event)"
