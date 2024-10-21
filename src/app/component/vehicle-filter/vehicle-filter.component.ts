@@ -60,30 +60,43 @@ export class VehicleFilterComponent implements OnInit {
   }
 
   toggleType(type: TipoVeicolo) {
-    if (this.filterState.selectedType === type) {
-      // Se il tipo viene deselezionato, resetta tutto
+    const isTypeSelected = this.filterState.selectedType === type;
+    
+    if (isTypeSelected) {
+      // Se il tipo viene deselezionato, resetta tutti i filtri
       this.filterState.selectedType = null;
       this.filterState.selectedBrand = null;
       this.filterState.selectedModel = null;
       this.filterState.selectedYear = null;
       this.filterState.selectedFuel = null;
+  
+      // Resetta la select per l'alimentazione nel componente figlio
+      if (this.fuelFilterComponent) {
+        this.fuelFilterComponent.resetFuelSelection();
+      }
     } else {
+      // Se un tipo viene selezionato, resetta gli altri filtri
       this.filterState.selectedType = type;
       this.filterState.selectedBrand = null;
       this.filterState.selectedModel = null;
       this.filterState.selectedYear = null;
       this.filterState.selectedFuel = null;
+      if (this.fuelFilterComponent) {
+        this.fuelFilterComponent.resetFuelSelection();
+      }
     }
-    console.log('selected:'+ this.filterState.selectedType);
-    console.log('type:'+ type);
+  
+    console.log('selected: ' + this.filterState.selectedType);
+    console.log('type: ' + type);
+  
     // Ripopola le opzioni disponibili in base ai nuovi filtri
     this.populateAvailableBrands();
     this.populateAvailableModels();
     this.populateAvailableYears();
+  
     // Applica i filtri aggiornati
     this.applyFilters();
   }
-
   populateAvailableBrands() {
     if (this.filterState.selectedType) {
       // Popola solo i brand corrispondenti al tipo selezionato

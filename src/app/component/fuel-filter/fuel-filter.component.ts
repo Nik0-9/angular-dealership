@@ -21,15 +21,15 @@ export class FuelFilterComponent {
     this.filterByFuel.emit(null);
   }
 
-  handleFuelChange(value: string) {
-    
-    const fuel = value === 'all' ? null : (value as Alimentazione);
-    this.filterByFuel.emit(fuel);
+  handleFuelChange(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.selectedFuel = selectElement.value === 'all' ? null : selectElement.value as Alimentazione;
+    this.filterByFuel.emit(this.selectedFuel);
   }
 
   resetFuelSelection() {
     this.selectedFuel = null; // Resetta il valore di selectedFuel
-    this.filterByFuel.emit(null); // Emette null per resettare il filtro
+    this.filterByFuel.emit('all'); // Emette null per resettare il filtro
   }
 }
 

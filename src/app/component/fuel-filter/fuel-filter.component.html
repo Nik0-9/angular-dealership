@@ -1,14 +1,12 @@
-<div class="mx-4">
-  <label for="fuelFilter" class="mr-2">Seleziona Alimentazione:</label>
-  <select
-    id="fuelFilter"
-    [(ngModel)]="selectedFuel"
-    (ngModelChange)="handleFuelChange($event)"
-    class="p-2 rounded bg-gray-200"
-  >
-  <option value="all" [selected]="selectedFuel === null ">Tutte le alimentazioni</option>
-    <option *ngFor="let alimentazione of alimentazioni" [value]="alimentazione">
-      {{ alimentazione }}
-    </option>
-  </select>
-</div>
+<select
+  id="fuelFilter"
+  [value]="selectedFuel === null ? 'all' : selectedFuel"
+  (change)="handleFuelChange($event)"
+  class="p-2 rounded bg-gray-200"
+>
+  <option value="all">Tutte le alimentazioni</option>
+  <option *ngFor="let alimentazione of alimentazioni" [value]="alimentazione">
+    {{ alimentazione }}
+  </option>
+</select>
+
