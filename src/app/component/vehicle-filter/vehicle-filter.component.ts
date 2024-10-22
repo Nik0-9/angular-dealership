@@ -10,6 +10,7 @@ import { TipoVeicolo, Veicolo, Alimentazione } from '../../types/db.type';
 import { CommonModule } from '@angular/common';
 import { FuelFilterComponent } from '../fuel-filter/fuel-filter.component';
 import { RangeFilterComponent } from '../range-filter/range-filter.component';
+import { FormsModule } from '@angular/forms';
 
 interface FilterState {
   selectedType: TipoVeicolo | null;
@@ -22,7 +23,12 @@ interface FilterState {
 @Component({
   selector: 'app-vehicle-filter',
   standalone: true,
-  imports: [CommonModule, FuelFilterComponent, RangeFilterComponent],
+  imports: [
+    CommonModule,
+    FuelFilterComponent,
+    RangeFilterComponent,
+    FormsModule,
+  ],
   templateUrl: './vehicle-filter.component.html',
   styleUrls: ['./vehicle-filter.component.scss'],
 })
@@ -30,9 +36,9 @@ export class VehicleFilterComponent implements OnInit {
   @Input() vehicles: Veicolo[] = [];
   @Output() filterByType = new EventEmitter<TipoVeicolo | null>();
   @Output() filterByFuel = new EventEmitter<Alimentazione | null | string>();
-  @Output() filterByBrand = new EventEmitter<string | undefined>();
-  @Output() filterByModel = new EventEmitter<string | undefined>();
-  @Output() filterByYear = new EventEmitter<number | undefined>();
+  @Output() filterByBrand = new EventEmitter<string | null>();
+  @Output() filterByModel = new EventEmitter<string | null>();
+  @Output() filterByYear = new EventEmitter<number | null>();
   @Output() filterByPrice = new EventEmitter<{ min: number; max: number }>();
   @Output() filterByKm = new EventEmitter<{ min: number; max: number }>();
   @ViewChild(FuelFilterComponent) fuelFilterComponent!: FuelFilterComponent;
@@ -61,21 +67,18 @@ export class VehicleFilterComponent implements OnInit {
 
   toggleType(selectedType: TipoVeicolo) {
     const isTypeSelected = this.filterState.selectedType === selectedType;
-    
+
     if (isTypeSelected) {
-      // Se il tipo viene deselezionato, resetta tutti i filtri
       this.filterState.selectedType = null;
       this.filterState.selectedBrand = null;
       this.filterState.selectedModel = null;
       this.filterState.selectedYear = null;
       this.filterState.selectedFuel = null;
-  
-      // Resetta la select per l'alimentazione nel componente figlio
+
       if (this.fuelFilterComponent) {
         this.fuelFilterComponent.resetFuelSelection();
       }
     } else {
-      // Se un tipo viene selezionato, resetta gli altri filtri
       this.filterState.selectedType = selectedType;
       this.filterState.selectedBrand = null;
       this.filterState.selectedModel = null;
@@ -85,15 +88,12 @@ export class VehicleFilterComponent implements OnInit {
         this.fuelFilterComponent.resetFuelSelection();
       }
     }
-  
     console.log('selected: ' + this.filterState.selectedType);
     console.log('type: ' + selectedType);
-  
     // Ripopola le opzioni disponibili in base ai nuovi filtri
     this.populateAvailableBrands();
     this.populateAvailableModels();
     this.populateAvailableYears();
-  
     // Applica i filtri aggiornati
     this.applyFilters();
   }
@@ -169,9 +169,9 @@ export class VehicleFilterComponent implements OnInit {
     // Emette gli eventi con lo stato attuale dei filtri
     this.filterByType.emit(this.filterState.selectedType);
     this.filterByFuel.emit(this.filterState.selectedFuel || null);
-    this.filterByBrand.emit(this.filterState.selectedBrand || undefined);
-    this.filterByModel.emit(this.filterState.selectedModel || undefined);
-    this.filterByYear.emit(this.filterState.selectedYear || undefined);
+    this.filterByBrand.emit(this.filterState.selectedBrand || null);
+    this.filterByModel.emit(this.filterState.selectedModel || null);
+    this.filterByYear.emit(this.filterState.selectedYear || null);
 
     // Aggiorna le opzioni di brand e modello dopo il filtro
     this.populateAvailableBrands();

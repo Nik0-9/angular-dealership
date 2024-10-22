@@ -22,9 +22,9 @@ export class VehicleShowcaseComponent {
   filteredVehicles: Veicolo[] = [];
   pageTitle: string = '';
   filterByType: TipoVeicolo | null = null;
-  filterByBrand: string | undefined = undefined;
-  filterByModel: string | undefined = undefined;
-  filterByYear: number | undefined = undefined;
+  filterByBrand: string | null = null;
+  filterByModel: string | null = null;
+  filterByYear: number | null = null;
   filterByFuel: Alimentazione | string | null = '';
   filterByPrice: { min: number; max: number } | null = null;
   filterByKm: { min: number; max: number } | null = null;
@@ -32,7 +32,7 @@ export class VehicleShowcaseComponent {
   constructor(private route: ActivatedRoute) {
     this.route.url.subscribe((url) => {
       if (url.some((segment) => segment.path === 'sold')) {
-        this.pageTitle = 'Veicoli acquistati';
+        this.pageTitle = 'Veicoli venduti';
         this.vehicles = DB.veicoli.filter(
           (veicolo) => veicolo.stato === Stato.VENDUTO
         );
@@ -47,16 +47,18 @@ export class VehicleShowcaseComponent {
   }
 
   applyTypeFilter(selectedType: TipoVeicolo | null) {
+    this.filterByType = selectedType;
     if (this.filterByType === null) {
-      this.filterByBrand = undefined;
-      this.filterByModel = undefined;
-      this.filterByYear = undefined;
+      this.filterByType = null;
+      this.filterByBrand = null;
+      this.filterByModel = null;
+      this.filterByYear = null;
       this.filterByFuel = null;
     } else {
       this.filterByType = selectedType;
-      this.filterByBrand = undefined;
-      this.filterByModel = undefined;
-      this.filterByYear = undefined;
+      this.filterByBrand = null;
+      this.filterByModel = null;
+      this.filterByYear = null;
       this.filterByFuel = null;
     }
 
@@ -80,18 +82,18 @@ export class VehicleShowcaseComponent {
       );
     });
   }
-  applyBrandFilter(brand: string | undefined) {
-    this.filterByBrand = brand === 'all' ? undefined : brand;
+  applyBrandFilter(brand: string | null) {
+    this.filterByBrand = brand === 'all' ? null : brand;
     this.applyFilters();
   }
 
-  applyModelFilter(model: string | undefined) {
-    this.filterByModel = model == 'all' ? undefined : model;
+  applyModelFilter(model: string | null) {
+    this.filterByModel = model == 'all' ? null : model;
     this.applyFilters();
   }
 
-  applyYearFilter(year: number | undefined) {
-    this.filterByYear = year == 1000 ? undefined : year;
+  applyYearFilter(year: number | null) {
+    this.filterByYear = year == 1000 ? null : year;
     this.applyFilters();
   }
 

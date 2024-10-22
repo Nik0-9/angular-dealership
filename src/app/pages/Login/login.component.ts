@@ -50,7 +50,7 @@ export class LogInComponent {
         if (validUser.ruolo === Ruolo.ADMIN && role === Ruolo.ADMIN) {
           this.router.navigate(['/showcase']);
         } else if (validUser.ruolo === Ruolo.USER && role === Ruolo.USER) {
-          this.router.navigate(['/sold']);
+          this.router.navigate(['/home']);
         } else {
           this.formError = 'Ruolo non corretto per questo utente';
         }

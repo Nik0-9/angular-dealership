@@ -25,6 +25,8 @@
     <label for="brandFilter" class="mr-2">Seleziona Brand:</label>
     <select
       id="brandFilter"
+      [value]=" filterState.selectedBrand === null ? 'all' :filterState.selectedBrand " 
+
       (change)="handleBrandChange($event)"
       class="p-2 rounded bg-gray-200"
     >
@@ -35,10 +37,12 @@
     </select>
   </div>
 
+  <!-- Filtro per modello -->
   <div class="mx-4">
     <label for="modelFilter" class="mr-2">Seleziona Modello:</label>
     <select
       id="modelFilter"
+      [value]=" filterState.selectedModel === null ? 'all' :filterState.selectedModel " 
       (change)="handleModelChange($event)"
       class="p-2 rounded bg-gray-200"
     >
@@ -48,14 +52,19 @@
       </option>
     </select>
   </div>
+
+  <!-- Filtro per anno -->
+
   <div class="mx-4">
     <label for="yearFilter" class="mr-2">Seleziona Anno:</label>
     <select
       id="yearFilter"
+      [value]=" filterState.selectedYear === null ? 'all' :filterState.selectedYear " 
+
       (change)="handleYearChange($event)"
       class="p-2 rounded bg-gray-200"
     >
-      <option value="1000">Tutti gli anni</option>
+      <option value="all">Tutti gli anni</option>
       <option *ngFor="let year of availableYears" [value]="year">
         {{ year }}
       </option>
