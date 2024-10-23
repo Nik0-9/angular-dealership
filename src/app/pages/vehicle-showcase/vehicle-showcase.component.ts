@@ -10,6 +10,9 @@ import {
 import { ActivatedRoute } from '@angular/router';
 import { VehicleFilterComponent } from '../../component/vehicle-filter/vehicle-filter.component';
 import { VehicleCardComponent } from '../../component/vehicle-card/vehicle-card.component';
+import { AuthService } from '../../auth.service';
+
+
 @Component({
   selector: 'app-vehicle-showcase',
   standalone: true,
@@ -29,10 +32,18 @@ export class VehicleShowcaseComponent {
   filterByPrice: { min: number; max: number } | null = null;
   filterByKm: { min: number; max: number } | null = null;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private authService: AuthService) {
+    const userRole = this.authService.userRole; // Ottieni il ruolo dell'utente
+    console.log('Ruolo dell\'utente loggato:', userRole);
     this.route.url.subscribe((url) => {
       if (url.some((segment) => segment.path === 'sold')) {
         this.pageTitle = 'Veicoli venduti';
+        this.vehicles = DB.veicoli.filter(
+          (veicolo) => veicolo.stato === Stato.VENDUTO
+        );
+      }
+      else if (url.some((segment) => segment.path === 'my-vehicles')) {
+        this.pageTitle = 'I miei veicolo';
         this.vehicles = DB.veicoli.filter(
           (veicolo) => veicolo.stato === Stato.VENDUTO
         );
