@@ -4,18 +4,28 @@
             <span class="text-xl font-bold mr-4">Logo</span>
             <span class="text-lg">Title</span>
         </div>
-        
+        <button *ngIf="isUserLoggedIn" 
+                (click)="logout()" 
+                class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
+            Logout
+        </button>
     </div>
-    <div class="bg-gray-700">
+    <div class="bg-gray-700" *ngIf="isUserLoggedIn">
         <ul class="flex justify-center space-x-6 py-2">
-            <li>
-                <a [routerLink]="['/showcase']"> Vetrina </a>
+            <li *ngIf="userRole === 'ADMIN'">
+                <a [routerLink]="['/showcase']">Vetrina</a>
             </li>
-            <li>
+            <li *ngIf="userRole === 'ADMIN'">
                 <a [routerLink]="['/sold']" class="hover:text-blue-300">Veicoli venduti</a>
             </li>
-            <li>
+            <li *ngIf="userRole === 'ADMIN'">
                 <a [routerLink]="['/stats']" class="hover:text-blue-300">Statistiche</a>
+            </li>
+            <li *ngIf="userRole === 'USER'">
+                <a [routerLink]="['/my-vehicles']" class="hover:text-blue-300">I miei veicoli</a>
+            </li>
+            <li *ngIf="userRole === 'USER'">
+                <a [routerLink]="['/vehicle-for-sale']" class="hover:text-blue-300">Veicoli in vendita</a>
             </li>
         </ul>
     </div>
