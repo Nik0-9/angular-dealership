@@ -62,7 +62,6 @@ export class VehicleFilterComponent implements OnInit {
     this.populateAvailableBrands();
     this.populateAvailableModels();
     this.populateAvailableYears();
-    console.log(this.filterState.selectedFuel);
   }
 
   toggleType(selectedType: TipoVeicolo) {

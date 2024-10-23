@@ -3,15 +3,18 @@
   <button
     (click)="toggleType(TipoVeicolo.AUTO)"
     [class.bg-blue-500]="filterState.selectedType === TipoVeicolo.AUTO"
-    class="text-white p-2 rounded">Auto</button>
+    class=" p-4 rounded-full flex items-center justify-center w-12 h-12"
+  >
+    <i class="fa-solid fa-car"></i>
+  </button>
 
   <!-- Filtro Moto -->
   <button
     (click)="toggleType(TipoVeicolo.MOTO)"
-    [class.bg-green-500]="filterState.selectedType === TipoVeicolo.MOTO"
-    class="text-white p-2 rounded"
+    [class.bg-blue-500]="filterState.selectedType === TipoVeicolo.MOTO"
+    class=" p-4 rounded-full flex items-center justify-center w-12 h-12"
   >
-    Moto
+    <i class="fa-solid fa-person-biking"></i>
   </button>
   <app-range-filter (filterByPrice)="applyPriceFilter($event)" (filterByKm)="applyKmFilter($event)"></app-range-filter>
 </div>

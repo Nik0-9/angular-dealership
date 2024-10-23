@@ -15,6 +15,7 @@
       />
       <span>{{ priceMin }} € - {{ priceMax }} €</span>
       <div class="flex justify-between">
+        <span>Min: </span> 
         <input
           type="number"
           [(ngModel)]="priceMin"
@@ -22,8 +23,9 @@
           [max]="priceMax"
           (input)="handlePriceChange()"
           placeholder="Min"
-          class="mr-2 w-full max-w-xs"
+          class="mr-2 w-auto max-w-xs"
         />
+        <span>Max: </span> 
         <input
           type="number"
           [(ngModel)]="priceMax"
@@ -31,7 +33,7 @@
           [max]="priceRange.max"
           (input)="handlePriceChange()"
           placeholder="Max"
-          class="ml-2 w-full max-w-xs"
+          class="ml-2 w-auto max-w-xs"
         />
       </div>
     </div>
