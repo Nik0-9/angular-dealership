@@ -6,19 +6,22 @@ import { Utente, Ruolo, DB } from './types/db.type'; // Importa Utente e Ruolo
   providedIn: 'root'
 })
 export class AuthService {
-  private utenti: Utente[] = [
-    { username: 'admin', password: 'passwordAdmin123', ruolo: Ruolo.ADMIN },
-    { username: 'user', password: 'passwordUser123', ruolo: Ruolo.USER }
-  ];
+  private utenti: Utente[] = DB.utenti;
 
   private currentUser: Utente | null = null;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    const savedUser = localStorage.getItem('loggedInUser');
+    if (savedUser){
+      this.currentUser = JSON.parse(savedUser);
+    }
+  }
 
-  login(username: string, password: string): boolean {
-    const user = this.utenti.find(u => u.username === username && u.password === password);
+  login(username: string, password: string, role: Ruolo): boolean {
+    const user = this.utenti.find(u => u.username === username && u.password === password && u.ruolo === role);
     if (user) {
       this.currentUser = user;
+      localStorage.setItem('loggedInUser', JSON.stringify(user));
       return true;
     }
     return false;
@@ -26,6 +29,7 @@ export class AuthService {
 
   logout(): void {
     this.currentUser = null;
+    localStorage.removeItem('loggedInUser');
   }
 
   get isLoggedIn(): boolean {
