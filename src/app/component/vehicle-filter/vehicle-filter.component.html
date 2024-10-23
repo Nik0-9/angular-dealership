@@ -2,19 +2,25 @@
   <!-- Filtro Auto -->
   <button
     (click)="toggleType(TipoVeicolo.AUTO)"
-    [class.bg-blue-500]="filterState.selectedType === TipoVeicolo.AUTO"
-    class=" p-4 rounded-full flex items-center justify-center w-12 h-12"
+    [class.bg-gray-800]="filterState.selectedType === TipoVeicolo.AUTO"
+    class="bg-gray-200 p-4 rounded-full flex items-center justify-center w-12 h-12 color-white"
   >
-    <i class="fa-solid fa-car"></i>
+    <i 
+    [class.text-white]="filterState.selectedType === TipoVeicolo.AUTO" 
+    [class.text-black]="filterState.selectedType !== TipoVeicolo.AUTO"
+    class="fa-solid fa-car"></i>
   </button>
 
   <!-- Filtro Moto -->
   <button
     (click)="toggleType(TipoVeicolo.MOTO)"
-    [class.bg-blue-500]="filterState.selectedType === TipoVeicolo.MOTO"
-    class=" p-4 rounded-full flex items-center justify-center w-12 h-12"
+    [class.bg-gray-800]="filterState.selectedType === TipoVeicolo.MOTO"
+    class="bg-gray-200 p-4 rounded-full flex items-center justify-center w-12 h-12"
   >
-    <i class="fa-solid fa-person-biking"></i>
+    <i 
+    [class.text-white]="filterState.selectedType === TipoVeicolo.MOTO" 
+    [class.text-black]="filterState.selectedType !== TipoVeicolo.MOTO"
+    class="fa-solid fa-person-biking"></i>
   </button>
   <app-range-filter (filterByPrice)="applyPriceFilter($event)" (filterByKm)="applyKmFilter($event)"></app-range-filter>
 </div>
