@@ -1,10 +1,10 @@
-<div class="border rounded-lg shadow-md bg-gray-800 text-white">
+<div class="border rounded-lg shadow-md bg-gray-800 text-white h-108">
   <img
     src="https://picsum.photos/300/200"
     alt="Immagine di un veicolo"
-    class="mb-4 rounded w-full"
+    class="mb-4 rounded rounded-t w-full "
   />
-  <div class="p-4">
+  <div class="p-4 flex-1">
     <h3 class="font-bold text-lg">{{ vehicle.brand }} {{ vehicle.modello }}</h3>
     <p class="text-sm text-gray-500">{{ vehicle.anno }}</p>
     <p><strong>Tipo</strong> {{ vehicle.tipo }}</p>
@@ -12,10 +12,10 @@
     <p><strong>Prezzo:</strong> {{ vehicle.prezzo | currency }}</p>
     <p><strong>Km:</strong> {{ vehicle.kilometri }}</p>
   </div>
-  <div *ngIf="isUser">
+  <div *ngIf="canBuy">
     <button
       
-      class="bg-gray-800 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+      class="bg-gray-200 hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded"
     >
     <i class="fa-solid fa-shopping-cart mr-2"></i> Acquista
     </button>

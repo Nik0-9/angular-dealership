@@ -32,9 +32,7 @@ export class VehicleShowcaseComponent {
   filterByPrice: { min: number; max: number } | null = null;
   filterByKm: { min: number; max: number } | null = null;
 
-  constructor(private route: ActivatedRoute, private authService: AuthService) {
-    const userRole = this.authService.userRole; // Ottieni il ruolo dell'utente
-    console.log('Ruolo dell\'utente loggato:', userRole);
+  constructor(private route: ActivatedRoute) {
     this.route.url.subscribe((url) => {
       if (url.some((segment) => segment.path === 'sold')) {
         this.pageTitle = 'Veicoli venduti';
@@ -113,13 +111,11 @@ export class VehicleShowcaseComponent {
     this.applyFilters();
   }
 
-  // Intercetta il filtro di prezzo
   onFilterByPrice(price: { min: number; max: number }) {
     this.filterByPrice = price;
     this.applyFilters();
   }
 
-  // Intercetta il filtro di chilometraggio
   onFilterByKm(km: { min: number; max: number }) {
     this.filterByKm = km;
     this.applyFilters();
