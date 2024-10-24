@@ -21,7 +21,7 @@
   >
     <app-vehicle-card
       *ngFor="let veicolo of filteredVehicles"
-      [vehicle]="veicolo"
+      [vehicle]="veicolo" [user]="loggedUser"
     >
     </app-vehicle-card>
   </div>

@@ -6,11 +6,11 @@ import {
   Stato,
   TipoVeicolo,
   Alimentazione,
+  Utente,
 } from '../../types/db.type';
 import { ActivatedRoute } from '@angular/router';
 import { VehicleFilterComponent } from '../../component/vehicle-filter/vehicle-filter.component';
 import { VehicleCardComponent } from '../../component/vehicle-card/vehicle-card.component';
-import { AuthService } from '../../auth.service';
 
 
 @Component({
@@ -21,6 +21,7 @@ import { AuthService } from '../../auth.service';
   styleUrls: ['./vehicle-showcase.component.scss'],
 })
 export class VehicleShowcaseComponent {
+  loggedUser: Utente | undefined;
   vehicles: Veicolo[] = [];
   filteredVehicles: Veicolo[] = [];
   pageTitle: string = '';
@@ -53,6 +54,16 @@ export class VehicleShowcaseComponent {
       }
       this.filteredVehicles = this.vehicles;
     });
+  }
+
+  ngOnInit(): void {
+    const storedUser = localStorage.getItem('loggedUser');
+    if (storedUser) {
+      this.loggedUser = JSON.parse(storedUser);
+      console.log('Utente loggato:', this.loggedUser);
+    } else {
+      console.log('Nessun utente loggato trovato nel localStorage');
+    }
   }
 
   applyTypeFilter(selectedType: TipoVeicolo | null) {

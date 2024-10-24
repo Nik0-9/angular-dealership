@@ -11,7 +11,7 @@ export class AuthService {
   private currentUser: Utente | null = null;
 
   constructor() {
-    const savedUser = localStorage.getItem('loggedInUser');
+    const savedUser = localStorage.getItem('loggedUser');
     if (savedUser){
       this.currentUser = JSON.parse(savedUser);
     }
@@ -21,7 +21,7 @@ export class AuthService {
     const user = this.utenti.find(u => u.username === username && u.password === password && u.ruolo === role);
     if (user) {
       this.currentUser = user;      
-      localStorage.setItem('loggedInUser', JSON.stringify(user));
+      localStorage.setItem('loggedUser', JSON.stringify(user));
       return true;
     }
     return false;
@@ -29,7 +29,7 @@ export class AuthService {
 
   logout(): void {
     this.currentUser = null;
-    localStorage.removeItem('loggedInUser');
+    localStorage.removeItem('loggedUser');
   }
 
   get isLoggedIn(): boolean {
