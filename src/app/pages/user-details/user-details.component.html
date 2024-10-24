@@ -1,0 +1,19 @@
+<div class="max-w-md mx-auto bg-white shadow-md rounded-lg p-6">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">Profilo Utente</h2>
+  
+    <!-- Immagine profilo -->
+    <div class="mb-4">
+      <img *ngIf="profileImage; else loading" [src]="profileImage" alt="Profile Picture"
+           class="w-32 h-32 rounded-full mx-auto">
+      <ng-template #loading>
+        <p class="text-center">Caricamento immagine...</p>
+      </ng-template>
+    </div>
+  
+    <!-- Dettagli utente -->
+    <div class="text-center">
+      <p class="text-lg text-gray-700"><strong>Nome:</strong> {{ userName }}</p>
+      <p class="text-lg text-gray-700"><strong>Ruolo:</strong> {{ userRole }}</p>
+    </div>
+  </div>
+  

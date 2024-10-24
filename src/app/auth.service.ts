@@ -10,7 +10,7 @@ export class AuthService {
 
   private currentUser: Utente | null = null;
 
-  constructor(private router: Router) {
+  constructor() {
     const savedUser = localStorage.getItem('loggedInUser');
     if (savedUser){
       this.currentUser = JSON.parse(savedUser);
@@ -20,7 +20,7 @@ export class AuthService {
   login(username: string, password: string, role: Ruolo): boolean {
     const user = this.utenti.find(u => u.username === username && u.password === password && u.ruolo === role);
     if (user) {
-      this.currentUser = user;
+      this.currentUser = user;      
       localStorage.setItem('loggedInUser', JSON.stringify(user));
       return true;
     }
@@ -38,5 +38,13 @@ export class AuthService {
 
   get userRole(): Ruolo | null {
     return this.currentUser ? this.currentUser.ruolo : null;
+  }
+
+  getUserDetails(){
+    const userDetails = {
+      name: this.currentUser?.username,
+      role: this.currentUser?.ruolo
+    }
+    return userDetails;
   }
 }

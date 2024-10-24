@@ -25,6 +25,9 @@
           <li *ngIf="userRole === 'USER'">
             <a [routerLink]="['/vehicle-for-sale']" class="hover:text-blue-300">Veicoli in vendita</a>
           </li>
+          <li *ngIf="userRole === 'USER'">
+            <a [routerLink]="['/user-details']" class="hover:text-blue-300">Profilo</a>
+          </li>
         </ul>
         
         <button

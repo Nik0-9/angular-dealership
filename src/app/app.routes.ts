@@ -5,7 +5,7 @@ import { VehicleShowcaseComponent } from './pages/vehicle-showcase/vehicle-showc
 import { StatsPageComponent } from './pages/stats-page/stats-page.component';
 import { authGuard } from './auth.guard';
 import { UnauthorizedComponent } from './pages/unauthorized/unauthorized.component';
-
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -39,6 +39,12 @@ export const routes: Routes = [
   {
     path: 'vehicle-for-sale',
     component: VehicleShowcaseComponent,
+    canActivate: [authGuard],
+    data: { role: 'USER' },
+  },
+  {
+    path: 'user-details',
+    component: UserDetailsComponent,
     canActivate: [authGuard],
     data: { role: 'USER' },
   },
