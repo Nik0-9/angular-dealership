@@ -1,9 +1,9 @@
-<div class="flex space-x-4 mb-4">
+<div class="flex flex-wrap space-x-4 mx-4 ">
   <!-- Filtro Auto -->
   <button
     (click)="toggleType(TipoVeicolo.AUTO)"
     [class.bg-gray-800]="filterState.selectedType === TipoVeicolo.AUTO"
-    class="bg-gray-200 p-4 rounded-full flex items-center justify-center w-12 h-12 color-white"
+    class="bg-gray-200 p-4 rounded-full flex items-center justify-center w-12 h-12 mb-4 mt-8"
   >
     <i 
     [class.text-white]="filterState.selectedType === TipoVeicolo.AUTO" 
@@ -15,23 +15,24 @@
   <button
     (click)="toggleType(TipoVeicolo.MOTO)"
     [class.bg-gray-800]="filterState.selectedType === TipoVeicolo.MOTO"
-    class="bg-gray-200 p-4 rounded-full flex items-center justify-center w-12 h-12"
+    class="bg-gray-200 p-4 rounded-full flex items-center justify-center w-12 h-12 mb-4 mt-8"
   >
     <i 
     [class.text-white]="filterState.selectedType === TipoVeicolo.MOTO" 
     [class.text-black]="filterState.selectedType !== TipoVeicolo.MOTO"
     class="fa-solid fa-person-biking"></i>
   </button>
+  <!-- Filtri prezzo e kilometri -->
   <app-range-filter (filterByPrice)="applyPriceFilter($event)" (filterByKm)="applyKmFilter($event)"></app-range-filter>
 </div>
-<div class="flex space-x-4 mb-4">
+<div class="flex flex-wrap space-y-4 mb-8 ">
 
   <!-- Filtro per alimentazione -->
   <app-fuel-filter (filterByFuel)="applyFuelFilter($event)"></app-fuel-filter>
   
   <!-- Filtro per brand -->
-  <div class="mx-4">
-    <label for="brandFilter" class="mr-2">Seleziona Brand:</label>
+  <div class="mx-4" >
+    <label for="brandFilter" class="mr-4">Seleziona Brand:</label>
     <select
       id="brandFilter"
       [value]=" filterState.selectedBrand === null ? 'all' :filterState.selectedBrand " 
@@ -47,7 +48,7 @@
   </div>
 
   <!-- Filtro per modello -->
-  <div class="mx-4">
+  <div class="mx-4" *ngIf="filterState.selectedBrand && filterState.selectedBrand !== 'all'">
     <label for="modelFilter" class="mr-2">Seleziona Modello:</label>
     <select
       id="modelFilter"

@@ -1,4 +1,4 @@
-<div class="container mx-auto py-8">
+<div class="container mx-auto py-8 ">
   <h2 class="text-2xl font-bold mb-4">{{ pageTitle }}</h2>
 
   <!-- Include il componente filtro -->
@@ -17,7 +17,7 @@
   <!-- Griglia dei veicoli filtrati -->
   <div
     *ngIf="filteredVehicles.length > 0; else noVehicles"
-    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6"
+    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-6"
   >
     <app-vehicle-card
       *ngFor="let veicolo of filteredVehicles"

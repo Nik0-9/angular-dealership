@@ -123,6 +123,17 @@ export class VehicleFilterComponent implements OnInit {
   }
 
   populateAvailableModels() {
+    const filteredVehicles = this.vehicles.filter((veicolo) => {
+      return (
+        (!this.filterState.selectedType ||
+          veicolo.tipo === this.filterState.selectedType) &&
+        (!this.filterState.selectedBrand ||
+          veicolo.brand === this.filterState.selectedBrand)
+      );
+    });
+    this.availableModels = [
+      ...new Set(filteredVehicles.map((veicolo) => veicolo.modello)),
+    ];
     if (this.filterState.selectedBrand) {
       //Popola solo i modelli che appartengono al brand selezionato
       this.availableModels = [
@@ -178,19 +189,20 @@ export class VehicleFilterComponent implements OnInit {
     this.populateAvailableYears();
   }
 
-  handleModelChange(event: Event) {
-    const selectElement = event.target as HTMLSelectElement;
-    this.filterState.selectedModel =
-      selectElement.value === 'all' ? null : selectElement.value;
-    this.populateAvailableYears();
-    this.applyFilters();
-  }
-
   handleBrandChange(event: Event) {
     const selectElement = event.target as HTMLSelectElement;
     this.filterState.selectedBrand =
       selectElement.value === 'all' ? null : selectElement.value;
     this.filterState.selectedModel = null;
+    this.populateAvailableModels();
+    this.applyFilters();
+  }
+
+  handleModelChange(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.filterState.selectedModel =
+      selectElement.value === 'all' ? null : selectElement.value;
+    this.populateAvailableYears();
     this.applyFilters();
   }
 
@@ -203,6 +215,7 @@ export class VehicleFilterComponent implements OnInit {
 
   applyFuelFilter(fuel: Alimentazione | null | string) {
     this.filterState.selectedFuel = fuel;
+
     this.applyFilters();
   }
 

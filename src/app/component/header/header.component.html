@@ -1,43 +1,60 @@
-<header class="bg-gray-800 text-white">
-    <div class="flex justify-center items-center p-4">
-      <div class="flex items-center">
-        <span class="text-xl font-bold mr-4">Logo</span>
-        <span class="text-lg">Title</span>
-      </div>
+<header *ngIf="userRole === 'USER'" class="bg-gray-800 text-white">
+  <div class="flex justify-center items-center p-4">
+    <div class="flex items-center">
+      <img src="../../../favicon.ico" alt="" >
+      <span class="text-lg ml-8">Concessionaria Angular</span>
     </div>
-  
-    <div class="bg-gray-700" *ngIf="isUserLoggedIn">
-      <div class="flex justify-between items-center py-2 px-4">
-        
-        <ul class="flex justify-center space-x-6">
-          <li *ngIf="userRole === 'ADMIN'">
-            <a [routerLink]="['/showcase']" class="hover:text-blue-300">Vetrina</a>
-          </li>
-          <li *ngIf="userRole === 'ADMIN'">
-            <a [routerLink]="['/sold']" class="hover:text-blue-300">Veicoli venduti</a>
-          </li>
-          <li *ngIf="userRole === 'ADMIN'">
-            <a [routerLink]="['/stats']" class="hover:text-blue-300">Statistiche</a>
-          </li>
-          <li *ngIf="userRole === 'USER'">
-            <a [routerLink]="['/my-vehicles']" class="hover:text-blue-300">I miei veicoli</a>
-          </li>
-          <li *ngIf="userRole === 'USER'">
-            <a [routerLink]="['/vehicle-for-sale']" class="hover:text-blue-300">Veicoli in vendita</a>
-          </li>
-          <li *ngIf="userRole === 'USER'">
-            <a [routerLink]="['/user-details']" class="hover:text-blue-300">Profilo</a>
-          </li>
-        </ul>
-        
-        <button
-          *ngIf="isUserLoggedIn"
-          (click)="logout()"
-          class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-2 text-sm rounded"
-        >
-          Logout
-        </button>
-      </div>
+  </div>
+
+  <div class="bg-gray-700 link">
+    <div class="flex justify-between items-center py-2 px-4">
+      <ul class="flex justify-center space-x-6">
+        <li>
+          <a [routerLink]="['/my-vehicles']" class="hover:text-blue-300">I miei veicoli</a>
+        </li>
+        <li>
+          <a [routerLink]="['/vehicle-for-sale']" class="hover:text-blue-300">Veicoli in vendita</a>
+        </li>
+        <li>
+          <a [routerLink]="['/user-details']" class="hover:text-blue-300">Profilo</a>
+        </li>
+      </ul>
+
+      <button
+        *ngIf="isUserLoggedIn"
+        (click)="logout()"
+        class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-2 text-sm rounded"
+      >
+        Logout
+      </button>
     </div>
-  </header>
-  
+  </div>
+</header>
+
+<!-- Sidebar per Admin -->
+<div *ngIf="userRole === 'ADMIN'" class="bg-gray-800 text-white h-screen w-48 md:w-50 fixed left-0 top-0 flex flex-col p-4">
+  <div class="mb-8">
+    <img src="../../../favicon.ico" alt="">
+
+  </div>
+
+  <ul class="flex flex-col space-y-4">
+    <li>
+      <a [routerLink]="['/showcase']" class="hover:text-blue-300">Vetrina</a>
+    </li>
+    <li>
+      <a [routerLink]="['/sold']" class="hover:text-blue-300">Veicoli venduti</a>
+    </li>
+    <li>
+      <a [routerLink]="['/stats']" class="hover:text-blue-300">Statistiche</a>
+    </li>
+  </ul>
+
+  <button
+    *ngIf="isUserLoggedIn"
+    (click)="logout()"
+    class="mt-auto bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-2 text-sm rounded"
+  >
+    Logout
+  </button>
+</div>
