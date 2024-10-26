@@ -1,14 +1,14 @@
-<div class="border rounded-lg shadow-md bg-gray-800 text-white h-108">
+<div class="border rounded-lg shadow-md bg-gray-800 text-white  ">
   <img
     src="https://picsum.photos/300/200"
     alt="Immagine di un veicolo"
-    class="mb-4 rounded rounded-t w-full "
+    class="rounded rounded-t w-full h-1/2"
   />
-  <div class="p-4 flex-1">
-    <h3 class="font-bold text-lg">{{ vehicle.brand }} {{ vehicle.modello }}</h3>
+  <div class="p-4 flex flex-col">
+    <h3 class="font-bold text-lg line-clamp-1">{{ vehicle.brand }} {{ vehicle.modello }}</h3>
     <p class="text-sm text-gray-500">{{ vehicle.anno }}</p>
     <p><strong>Tipo</strong> {{ vehicle.tipo }}</p>
-    <p><strong>Alimentazione:</strong> {{ vehicle.alimentazione }}</p>
+    <p><strong>Alimentazione:</strong> <br>{{ vehicle.alimentazione }}</p>
     <p><strong>Prezzo:</strong> {{ vehicle.prezzo | currency }}</p>
     <p><strong>Km:</strong> {{ vehicle.kilometri }}</p>
   </div>

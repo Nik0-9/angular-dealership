@@ -1,4 +1,4 @@
-<header *ngIf="userRole === 'USER'" class="bg-gray-800 text-white">
+<header class="bg-gray-800 text-white">
   <div class="flex justify-center items-center p-4">
     <div class="flex items-center">
       <img src="../../../favicon.ico" alt="" >
@@ -6,7 +6,7 @@
     </div>
   </div>
 
-  <div class="bg-gray-700 link">
+  <div *ngIf="userRole === 'USER'" class="bg-gray-700 link">
     <div class="flex justify-between items-center py-2 px-4">
       <ul class="flex justify-center space-x-6">
         <li>

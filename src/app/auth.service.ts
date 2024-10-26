@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { Utente, Ruolo, DB } from './types/db.type'; // Importa Utente e Ruolo
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class AuthService {
 
   private currentUser: Utente | null = null;
 
-  constructor() {
+  constructor(private router: Router) {
     const savedUser = localStorage.getItem('loggedUser');
     if (savedUser){
       this.currentUser = JSON.parse(savedUser);
@@ -30,6 +30,7 @@ export class AuthService {
   logout(): void {
     this.currentUser = null;
     localStorage.removeItem('loggedUser');
+    this.router.navigate(['/login']);
   }
 
   get isLoggedIn(): boolean {
