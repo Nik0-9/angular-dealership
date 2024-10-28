@@ -16,9 +16,13 @@
     <button
       
       class="bg-gray-800 text-white hover:bg-gray-200 hover:text-gray-800  m-2 p-2 rounded"
-      (click)="purchaseVehicle()"
+      (click)="openPurchaseModal()"
     >
     <i class="fa-solid fa-shopping-cart mr-2"></i> Acquista
     </button>
+    <app-confirm-modal *ngIf="showModal" 
+                   (confirm)="purchaseVehicle()" 
+                   (cancel)="cancelPurchase()">
+</app-confirm-modal>
   </div>
 </div>

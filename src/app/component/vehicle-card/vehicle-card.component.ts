@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Veicolo, Utente } from '../../types/db.type';
 import { ActivatedRoute } from '@angular/router';
 import { EmailService } from '../../email.service';
+import { ConfirmModalComponent } from '../../confirm-modal/confirm-modal.component';
 
 @Component({
   selector: 'app-vehicle-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ConfirmModalComponent],
   templateUrl: './vehicle-card.component.html',
   styleUrl: './vehicle-card.component.scss',
 })
@@ -15,6 +16,7 @@ export class VehicleCardComponent {
   @Input() vehicle!: Veicolo
   @Input() user!: Utente | undefined;
   canBuy: boolean = false;
+  showModal: boolean = false;
   constructor(private route: ActivatedRoute, private emailService: EmailService) {
     this.route.url.subscribe((url) => {
       if (url.some((segment) => segment.path === 'vehicle-for-sale')) {
@@ -22,10 +24,15 @@ export class VehicleCardComponent {
       }
     });
   }
+  openPurchaseModal() {
+    this.showModal = true;
+  }
 
+  cancelPurchase() {
+    this.showModal = false; 
+  }
   purchaseVehicle(){
-    console.log('acquista cliccato');
-    console.log('User:', this.user);
+    this.showModal = false;
     
     if(this.user){
       this.emailService.sendPurchaseConfirmation(this.vehicle, this.user)
