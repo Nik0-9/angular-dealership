@@ -19,4 +19,13 @@ export class UnauthorizedComponent {
       this.router.navigate(['/login']);
     }
   }
+  // navigateBasedOnRole(): void {
+  //   // Controlla il ruolo dell'utente e naviga alla pagina corrispondente
+  //   const userRole = this.authService.userRole;
+  //   if (userRole === 'ADMIN') {
+  //     this.router.navigate(['/showcase']);
+  //   } else if (userRole === 'USER') {
+  //     this.router.navigate(['/my-vehicles']);
+  //   }
+  // }
 }

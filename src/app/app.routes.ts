@@ -6,6 +6,7 @@ import { StatsPageComponent } from './pages/stats-page/stats-page.component';
 import { authGuard } from './auth.guard';
 import { UnauthorizedComponent } from './pages/unauthorized/unauthorized.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -49,6 +50,7 @@ export const routes: Routes = [
     data: { role: 'USER' },
   },
   { path: 'unauthorized', component: UnauthorizedComponent },
+  { path: '**', component:NotFoundComponent  }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

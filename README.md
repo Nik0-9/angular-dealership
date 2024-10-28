@@ -21,7 +21,7 @@ Nota: Questo codice non è concepito come esempio di progetto professionale. È 
 
 - Angular Material: Sfruttato per gestire elementi come slider e input, permettendomi di esplorare un’implementazione di UI senza scrivere componenti completamente personalizzati.
 
-# TemplateV17
+## TemplateV17
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
 
