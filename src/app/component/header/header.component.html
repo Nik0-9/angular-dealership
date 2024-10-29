@@ -1,7 +1,7 @@
 <header class="bg-gray-800 text-white">
   <div class="flex justify-center items-center p-4">
     <div class="flex items-center">
-      <img src="../../../favicon.ico" alt="" >
+      <img src="../../../favicon.ico" alt="" />
       <span class="text-lg ml-8">Concessionaria Angular</span>
     </div>
   </div>
@@ -10,13 +10,19 @@
     <div class="flex justify-between items-center py-2 px-4">
       <ul class="flex justify-center space-x-6">
         <li>
-          <a [routerLink]="['/my-vehicles']" class="hover:text-blue-300">I miei veicoli</a>
+          <a [routerLink]="['/my-vehicles']" class="hover:text-blue-300"
+            >I miei veicoli</a
+          >
         </li>
         <li>
-          <a [routerLink]="['/vehicle-for-sale']" class="hover:text-blue-300">Veicoli in vendita</a>
+          <a [routerLink]="['/vehicle-for-sale']" class="hover:text-blue-300"
+            >Veicoli in vendita</a
+          >
         </li>
         <li>
-          <a [routerLink]="['/user-details']" class="hover:text-blue-300">Profilo</a>
+          <a [routerLink]="['/user-details']" class="hover:text-blue-300"
+            >Profilo</a
+          >
         </li>
       </ul>
 
@@ -32,21 +38,34 @@
 </header>
 
 <!-- Sidebar per Admin -->
-<div *ngIf="userRole === 'ADMIN'" class="bg-gray-800 text-white h-screen w-48 md:w-50 fixed left-0 top-0 flex flex-col p-4">
+<div
+  *ngIf="userRole === 'ADMIN'"
+  class="bg-gray-700 text-white h-screen w-16 md:w-48 fixed left-0 top-0 flex flex-col p-4 "
+  [ngClass]="{'w-16 ' : isSmallScreen}"
+>
   <div class="mb-8">
-    <img src="../../../favicon.ico" alt="">
-
+    <img src="../../../favicon.ico" alt="" />
   </div>
 
-  <ul class="flex flex-col space-y-4">
-    <li>
-      <a [routerLink]="['/showcase']" class="hover:text-blue-300">Vetrina</a>
+  <ul class="flex flex-col space-y-4 mt-4 gap-4">
+    <li >
+      <a [routerLink]="['/showcase']" class=" hover:text-blue-300">
+        <i class="fa-solid fa-car fa-xl"></i>
+        <span class="ml-2 hidden md:inline">Vetrina</span>
+      </a>
     </li>
     <li>
-      <a [routerLink]="['/sold']" class="hover:text-blue-300">Veicoli venduti</a>
+      <a [routerLink]="['/sold']" class=" hover:text-blue-300">
+        <i class="fa-solid fa-cash-register fa-xl"></i>
+        <span class="ml-2 hidden md:inline">Veicoli venduti</span>
+        </a>
     </li>
     <li>
-      <a [routerLink]="['/stats']" class="hover:text-blue-300">Statistiche</a>
+      <a 
+      [routerLink]="['/stats']" class=" hover:text-blue-300">
+      <i class="fa-solid fa-table fa-xl"></i>
+      <span class="ml-2 hidden md:inline">Statistiche</span>
+    </a>
     </li>
   </ul>
 
@@ -55,6 +74,7 @@
     (click)="logout()"
     class="mt-auto bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-2 text-sm rounded"
   >
-    Logout
+  <i class="fa-solid fa-arrow-right-from-bracket"></i> 
+    <span class="hidden md:inline"> Logout </span>
   </button>
 </div>

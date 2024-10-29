@@ -27,7 +27,7 @@ export class LogInComponent {
     private authService: AuthService
   ) {
     this.loginForm = this.form.group({
-      role: ['', Validators.required],
+      //role: ['', Validators.required],
       user: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(8)]],
     });
@@ -37,18 +37,18 @@ export class LogInComponent {
     this.formError = null;
     const username = this.loginForm.get('user')?.value.trim();
     const password = this.loginForm.get('password')?.value.trim();
-    const role = this.loginForm.get('role')?.value;
+    //const role = this.loginForm.get('role')?.value;
 
     if (this.loginForm.valid) {
       // Usa il servizio per autenticare l'utente
-      if (this.authService.login(username, password, role)) {
+      if (this.authService.login(username, password)) {
         const userRole = this.authService.userRole;
 
         // Verifica il ruolo dell'utente
-        if (userRole === Ruolo.ADMIN && role === Ruolo.ADMIN) {
+        if (userRole === Ruolo.ADMIN) {
           this.router.navigate(['/showcase']);
 
-        } else if (userRole === Ruolo.USER && role === Ruolo.USER) {
+        } else if (userRole === Ruolo.USER ) {
           this.router.navigate(['/my-vehicles']);
         } else {
           this.formError = 'Ruolo non corretto per questo utente';

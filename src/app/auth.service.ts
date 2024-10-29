@@ -17,10 +17,11 @@ export class AuthService {
     }
   }
 
-  login(username: string, password: string, role: Ruolo): boolean {
-    const user = this.utenti.find(u => u.username === username && u.password === password && u.ruolo === role);
+  login(username: string, password: string): boolean {
+    const user = this.utenti.find(u => u.username === username && u.password === password);
     if (user) {
-      this.currentUser = user;      
+      this.currentUser = user; 
+      this.currentUser.ruolo = user.ruolo;     
       localStorage.setItem('loggedUser', JSON.stringify(user));
       return true;
     }

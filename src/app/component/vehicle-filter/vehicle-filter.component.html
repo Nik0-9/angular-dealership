@@ -1,14 +1,15 @@
-<div class="flex flex-wrap mx-4 ">
+<div class="flex flex-wrap ">
   <!-- Filtro Auto -->
   <button
     (click)="toggleType(TipoVeicolo.AUTO)"
     [class.bg-gray-800]="filterState.selectedType === TipoVeicolo.AUTO"
     class="bg-gray-200 p-4 rounded-full flex items-center justify-center w-12 h-12 my-8 mx-6"
   >
-    <i 
-    [class.text-white]="filterState.selectedType === TipoVeicolo.AUTO" 
-    [class.text-black]="filterState.selectedType !== TipoVeicolo.AUTO"
-    class="fa-solid fa-car"></i>
+    <i
+      [class.text-white]="filterState.selectedType === TipoVeicolo.AUTO"
+      [class.text-black]="filterState.selectedType !== TipoVeicolo.AUTO"
+      class="fa-solid fa-car"
+    ></i>
   </button>
 
   <!-- Filtro Moto -->
@@ -17,26 +18,30 @@
     [class.bg-gray-800]="filterState.selectedType === TipoVeicolo.MOTO"
     class="bg-gray-200 p-4 rounded-full flex items-center justify-center w-12 h-12 my-8 mx-6"
   >
-    <i 
-    [class.text-white]="filterState.selectedType === TipoVeicolo.MOTO" 
-    [class.text-black]="filterState.selectedType !== TipoVeicolo.MOTO"
-    class="fa-solid fa-person-biking"></i>
+    <i
+      [class.text-white]="filterState.selectedType === TipoVeicolo.MOTO"
+      [class.text-black]="filterState.selectedType !== TipoVeicolo.MOTO"
+      class="fa-solid fa-person-biking"
+    ></i>
   </button>
   <!-- Filtri prezzo e kilometri -->
-  <app-range-filter (filterByPrice)="applyPriceFilter($event)" (filterByKm)="applyKmFilter($event)"></app-range-filter>
+  <app-range-filter
+    (filterByPrice)="applyPriceFilter($event)"
+    (filterByKm)="applyKmFilter($event)"
+  ></app-range-filter>
 </div>
-<div class="flex flex-wrap space-y-4 mb-8 ">
-
+<div class="flex flex-wrap space-y-4 mb-8">
   <!-- Filtro per alimentazione -->
   <app-fuel-filter (filterByFuel)="applyFuelFilter($event)"></app-fuel-filter>
-  
+
   <!-- Filtro per brand -->
-  <div class="mx-4" >
+  <div class="mx-4">
     <label for="brandFilter" class="mr-4">Seleziona Brand:</label>
     <select
       id="brandFilter"
-      [value]=" filterState.selectedBrand === null ? 'all' :filterState.selectedBrand " 
-
+      [value]="
+        filterState.selectedBrand === null ? 'all' : filterState.selectedBrand
+      "
       (change)="handleBrandChange($event)"
       class="p-2 rounded bg-gray-200"
     >
@@ -48,11 +53,16 @@
   </div>
 
   <!-- Filtro per modello -->
-  <div class="mx-4" *ngIf="filterState.selectedBrand && filterState.selectedBrand !== 'all'">
+  <div
+    class="mx-4"
+    *ngIf="filterState.selectedBrand && filterState.selectedBrand !== 'all'"
+  >
     <label for="modelFilter" class="mr-2">Seleziona Modello:</label>
     <select
       id="modelFilter"
-      [value]=" filterState.selectedModel === null ? 'all' :filterState.selectedModel " 
+      [value]="
+        filterState.selectedModel === null ? 'all' : filterState.selectedModel
+      "
       (change)="handleModelChange($event)"
       class="p-2 rounded bg-gray-200"
     >
@@ -69,8 +79,9 @@
     <label for="yearFilter" class="mr-2">Seleziona Anno:</label>
     <select
       id="yearFilter"
-      [value]=" filterState.selectedYear === null ? 'all' :filterState.selectedYear " 
-
+      [value]="
+        filterState.selectedYear === null ? 'all' : filterState.selectedYear
+      "
       (change)="handleYearChange($event)"
       class="p-2 rounded bg-gray-200"
     >

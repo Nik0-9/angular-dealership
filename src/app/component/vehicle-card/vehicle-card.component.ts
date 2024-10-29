@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Veicolo, Utente } from '../../types/db.type';
 import { ActivatedRoute } from '@angular/router';
 import { EmailService } from '../../email.service';
-import { ConfirmModalComponent } from '../../confirm-modal/confirm-modal.component';
+import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component';
 
 @Component({
   selector: 'app-vehicle-card',
