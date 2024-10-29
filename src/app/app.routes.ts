@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LogInComponent } from './pages/Login/login.component';
 import { VehicleShowcaseComponent } from './pages/vehicle-showcase/vehicle-showcase.component';
 import { StatsPageComponent } from './pages/stats-page/stats-page.component';
-import { authGuard } from './auth.guard';
+import { authGuard } from './services/auth.guard';
 import { UnauthorizedComponent } from './pages/unauthorized/unauthorized.component';
 import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';

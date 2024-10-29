@@ -8,7 +8,7 @@ import {
 import { Router } from '@angular/router';
 import { Ruolo, DB, Utente } from '../../types/db.type';
 import { CommonModule } from '@angular/common';
-import { AuthService } from '../../auth.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',

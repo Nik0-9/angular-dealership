@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
-import { DB, Veicolo, Utente } from './types/db.type';
+import { DB, Veicolo, Utente } from '../types/db.type';
 
 @Injectable({
   providedIn: 'root',

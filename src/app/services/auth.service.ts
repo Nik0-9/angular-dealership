@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Utente, Ruolo, DB } from './types/db.type'; // Importa Utente e Ruolo
+import { Utente, Ruolo, DB } from '../types/db.type'; // Importa Utente e Ruolo
 import { Router } from '@angular/router';
 
 @Injectable({

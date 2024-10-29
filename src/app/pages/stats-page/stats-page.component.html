@@ -1,7 +1,7 @@
 <div class="container mx-auto py-8">
     <h2 class="text-2xl font-bold mb-6 text-center">Statistiche di Vendita</h2>
   
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    <div class="flex flex-wrap justify-center gap-6">
   
       <!-- Auto venduta a prezzo massimo -->
       <div class="bg-white shadow-md rounded-lg p-6 text-center">
@@ -23,13 +23,13 @@
   
     </div>
   
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+    <div class="flex flex-wrap justify-center gap-6 mt-8">
       
       <!-- Prezzo medio delle vendite -->
-      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+      <div class="bg-white shadow-md rounded-lg p-6 text-center w-80">
         <h3 class="text-lg font-bold mb-4">Prezzo Medio Vendite</h3>
         <p *ngIf="vehiclesSold.length > 0; else noDataMean">
-          Prezzo Medio: {{ prezzoMedioVendite | currency }}
+          {{ prezzoMedioVendite | currency }}
         </p>
         <ng-template #noDataMean>
           <p>Non ci sono veicoli venduti</p>
@@ -37,7 +37,7 @@
       </div>
   
       <!-- Marchio più venduto -->
-      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+      <div class="bg-white shadow-md rounded-lg p-6 text-center w-80">
         <h3 class="text-lg font-bold mb-4">Brand Più Venduto</h3>
         <p *ngIf="marchioPiuVenduto; else noDataBrand">
           {{ marchioPiuVenduto }}

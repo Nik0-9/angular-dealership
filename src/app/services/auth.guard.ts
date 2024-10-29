@@ -1,7 +1,7 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { AuthService } from './auth.service';
-import { Ruolo } from './types/db.type';
+import { Ruolo } from '../types/db.type';
 
 
 
