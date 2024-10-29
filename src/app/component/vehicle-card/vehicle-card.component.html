@@ -5,7 +5,9 @@
     class="rounded rounded-t w-full h-1/2"
   />
   <div class="p-4 flex flex-col">
-    <h3 class=" text-lg line-clamp-1">{{ vehicle.brand }} {{ vehicle.modello }}</h3>
+    <h3 class=" text-lg line-clamp-1" title="{{ vehicle.brand }} {{ vehicle.modello }}">
+      {{ vehicle.brand }} {{ vehicle.modello }}
+    </h3>
     <p class="text-sm text-gray-500">{{ vehicle.anno }}</p>
     <p><strong>Tipo</strong> {{ vehicle.tipo }}</p>
     <p><strong>Alimentazione:</strong> <br>{{ vehicle.alimentazione }}</p>
