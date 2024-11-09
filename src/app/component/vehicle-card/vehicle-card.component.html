@@ -23,7 +23,7 @@
     <i class="fa-solid fa-shopping-cart mr-2"></i> Acquista
     </button>
     <app-confirm-modal *ngIf="showModal" 
-                   (confirm)="purchaseVehicle()" 
+                   (confirm)="purchaseVehicle($event)"
                    (cancel)="cancelPurchase()">
 </app-confirm-modal>
   </div>

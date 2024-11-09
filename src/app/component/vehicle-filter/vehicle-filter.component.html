@@ -1,4 +1,4 @@
-<div class="flex flex-wrap ">
+<div class="flex flex-wrap justify-center">
   <!-- Filtro Auto -->
   <button
     (click)="toggleType(TipoVeicolo.AUTO)"
@@ -30,7 +30,7 @@
     (filterByKm)="applyKmFilter($event)"
   ></app-range-filter>
 </div>
-<div class="flex flex-wrap space-y-4 mb-8">
+<div class="flex flex-wrap justify-center space-y-4 mb-8">
   <!-- Filtro per alimentazione -->
   <app-fuel-filter (filterByFuel)="applyFuelFilter($event)"></app-fuel-filter>
 

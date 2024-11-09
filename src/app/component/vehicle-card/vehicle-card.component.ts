@@ -15,6 +15,7 @@ import { ConfirmModalComponent } from '../confirm-modal/confirm-modal.component'
 export class VehicleCardComponent {
   @Input() vehicle!: Veicolo
   @Input() user!: Utente | undefined;
+  @Input() to_email: string = '';
   canBuy: boolean = false;
   showModal: boolean = false;
   constructor(private route: ActivatedRoute, private emailService: EmailService) {
@@ -31,14 +32,14 @@ export class VehicleCardComponent {
   cancelPurchase() {
     this.showModal = false; 
   }
-  purchaseVehicle(){
+  purchaseVehicle(to_email: string){
     this.showModal = false;
     
     if(this.user){
-      this.emailService.sendPurchaseConfirmation(this.vehicle, this.user)
+      this.emailService.sendPurchaseConfirmation(this.vehicle, this.user, to_email)
       .then(res =>{
         console.log('Success', res.status, res.text);
-        alert('Email inviata!');
+        alert('Email inviata all\'indirizzo: ' + to_email);
       })
       .catch(error => {
         console.error('Failed...', error);
