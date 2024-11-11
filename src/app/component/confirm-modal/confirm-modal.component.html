@@ -7,13 +7,15 @@
       type="email"
       id="email"
       [(ngModel)]="to_mail"
-      class="w-full p-2 mt-1 rounded bg-gray-700 text-white focus:outline-none focus:bg-gray-600"
+      (ngModelChange)="validateEmail()"
+      class="w-full p-2 my-1 rounded bg-gray-700 text-white focus:outline-none focus:bg-gray-600"
       placeholder="Inserisci la tua email"
       required
     />
+    <div *ngIf="!isMailValid" class="text-red-500 mt-1"> Email non valida </div>
     <div class="flex justify-end mt-6">
       <button (click)="onCancel()" class="px-4 py-2 bg-gray-300 rounded mr-2">Annulla</button>
-      <button (click)="onConfirm()" class="px-4 py-2 bg-blue-600 text-white rounded">Conferma</button>
+      <button (click)="onConfirm()" [disabled]="!isMailValid" class="px-4 py-2 bg-blue-600 text-white rounded">Conferma</button>
     </div>
   </div>
 </div>
